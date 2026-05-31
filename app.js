@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         emptyState.style.display = 'none';
-        channelsGrid.style.display = viewMode === 'grid' ? 'grid' : 'block';
+        channelsGrid.style.display = 'grid';
         if (viewMode === 'list') {
             channelsGrid.classList.add('list-mode');
         } else {
