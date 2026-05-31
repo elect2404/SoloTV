@@ -337,11 +337,11 @@ body {
     line-height: 1.4;
     color: var(--text-active);
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 2.8rem;
+    height: 1.4rem;
 }
 
 .card-source {
@@ -682,6 +682,6 @@ body {
     .card-title {
         font-size: 0.85rem;
         line-height: 1.4;
-        height: 2.5rem;
+        height: 1.25rem;
     }
 }
