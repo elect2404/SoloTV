@@ -1,10 +1,10 @@
 {
-  "name": "IPTV Player Premium",
-  "short_name": "IPTV Premium",
+  "name": "SoloTV",
+  "short_name": "SoloTV",
   "description": "Reproductor IPTV moderno para canales y películas en vivo.",
   "start_url": "./index.html",
-  "display": "standalone",
-  "background_color": "#0a0a0c",
+  "display": "fullscreen",
+  "background_color": "#0c0d14",
   "theme-color": "#ed2c25",
   "orientation": "any",
   "icons": [
