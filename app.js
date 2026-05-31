@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoPlayer = document.getElementById('video-player');
     const closePlayerModal = document.getElementById('close-player-modal');
     const modalChannelLogo = document.getElementById('modal-channel-logo');
+    const modalFallbackIcon = document.getElementById('modal-fallback-icon');
     const modalChannelTitle = document.getElementById('modal-channel-title');
     const modalFavBtn = document.getElementById('modal-fav-btn');
     const playerError = document.getElementById('player-error');
@@ -367,7 +368,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <i class="${isFav ? 'fa-solid' : 'fa-regular'} fa-heart"></i>
                 </button>
                 <div class="card-logo-container">
-                    <img class="card-logo" src="${logoPath || 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120%22%20height%3D%22120%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20fill%3D%22%231e2327%22%20rx%3D%2215%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-weight%3D%22bold%22%20font-size%3D%2240%22%20fill%3D%22%23ffffff%22%3ETV%3C%2Ftext%3E%3C%2Fsvg%3E'}" alt="${ch.name}" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120%22%20height%3D%22120%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20fill%3D%22%231e2327%22%20rx%3D%2215%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-weight%3D%22bold%22%20font-size%3D%2240%22%20fill%3D%22%23ffffff%22%3ETV%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                    <img class="card-logo" src="${logoPath || 'error'}" alt="${ch.name}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fa-solid fa-tv" style="display: none; font-size: 2.5rem; color: #555;"></i>
                 </div>
                 <div class="card-title" title="${ch.name}">${ch.name}</div>
                 <div class="card-source">${ch.language}</div>
@@ -541,8 +543,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // 9. Open/Close Player Modal
     function openPlayer(ch) {
         modalChannelTitle.innerText = ch.name;
-        modalChannelLogo.src = ch.local_logo ? ch.local_logo : ch.logo;
-        modalChannelLogo.setAttribute('onerror', "this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120%22%20height%3D%22120%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20fill%3D%22%231e2327%22%20rx%3D%2215%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-weight%3D%22bold%22%20font-size%3D%2240%22%20fill%3D%22%23ffffff%22%3ETV%3C%2Ftext%3E%3C%2Fsvg%3E';");
+        modalChannelLogo.src = ch.local_logo ? ch.local_logo : (ch.logo || 'error');
+        modalChannelLogo.style.display = 'block';
+        modalFallbackIcon.style.display = 'none';
+
+        modalChannelLogo.onerror = function() {
+            this.style.display = 'none';
+            modalFallbackIcon.style.display = 'block';
+        };
         
         // Favorite state in Modal
         const isFav = favorites.some(fav => fav.page_url === ch.page_url);
