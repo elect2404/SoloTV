@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- HLS.js for IPTV Streaming -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <link rel="stylesheet" href="style.css?v=2.3">
+    <link rel="stylesheet" href="style.css?v=2.5">
     
     <!-- PWA -->
     <link rel="manifest" href="manifest.json">
@@ -118,7 +118,8 @@
                 </div>
             </header>
             <div class="video-wrapper">
-                <video id="video-player" preload="auto" autoplay playsinline></video>
+                <!-- TV version uses script controls, mobile version uses native controls. We dynamically configure this via JS. -->
+                <video id="video-player" controls preload="auto" autoplay playsinline></video>
                 <div id="player-error" class="player-error" style="display: none;">
                     <i class="fa-solid fa-triangle-exclamation"></i>
                     <p>El canal no está disponible en este momento.</p>
@@ -127,6 +128,6 @@
         </div>
     </div>
 
-    <script src="app.js?v=2.3"></script>
+    <script src="app.js?v=2.5"></script>
 </body>
 </html>

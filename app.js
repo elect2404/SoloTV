@@ -195,13 +195,16 @@ document.addEventListener('DOMContentLoaded', () => {
             renderChannels();
             setupSidebarNavigation();
 
-            // Autofocus first channel card for immediate navigation visibility
-            setTimeout(() => {
-                const firstCard = channelsGrid.querySelector('.channel-card');
-                if (firstCard) {
-                    firstCard.focus();
-                }
-            }, 300);
+            // Autofocus first channel card only in TV mode (widescreen or Android TV)
+            const isTV = (window.Android) || (window.innerWidth >= 1200 && window.innerHeight >= 700);
+            if (isTV) {
+                setTimeout(() => {
+                    const firstCard = channelsGrid.querySelector('.channel-card');
+                    if (firstCard) {
+                        firstCard.focus();
+                    }
+                }, 300);
+            }
         } catch (error) {
             console.error('Error cargando canales:', error);
             channelsGrid.innerHTML = `<div class="empty-state"><i class="fa-solid fa-triangle-exclamation"></i><h3>${t.errorLoading}</h3><p>${t.errorLoadingDesc}</p></div>`;
