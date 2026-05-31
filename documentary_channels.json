@@ -1,0 +1,339 @@
+[
+  {
+    "name": "Love Nature",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/89902ad1c93745ba04306321089fd39d.webp",
+    "stream_url": "https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/love-nature",
+    "source": "category:variedades:page:1"
+  },
+  {
+    "name": "TV Cultura",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/ac86ed7edabf2d886a3b8430b4f13c91.webp",
+    "stream_url": "https://player-tvcultura.stream.uol.com.br/live/tvcultura.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tv-cultura",
+    "source": "category:ninos:page:1"
+  },
+  {
+    "name": "Tv Futuro (Cultura RN)",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/ca08395b7d600c7f467224100d43beda.webp",
+    "stream_url": "https://tv03.zas.media:1936/tvfuturo/tvfuturo/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tv-futuro",
+    "source": "category:ninos:page:2"
+  },
+  {
+    "name": "Love The Planet",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/0051dffef6555ae2d69b59e63b301b3b.webp",
+    "stream_url": "https://amg01821-lovetvchannels-lovetheplanetsp-tivify-tivify-vycsr.amagi.tv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/love-the-planet",
+    "source": "category:documentales"
+  },
+  {
+    "name": "RT Documentary Channel",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/7ab9a956d38f2361c92545120dee2a95.webp",
+    "stream_url": "https://rt-rtd.rttv.com/dvr/rtdoc/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/rt-documentary-channel",
+    "source": "category:documentales"
+  },
+  {
+    "name": "Xtrema TV - Xphere Wild",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/2af4dd316afda72cb7c982a399289623.webp",
+    "stream_url": "https://stmv2.voxtvhd.com.br/xpherewild/xpherewild/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/xtrema-tv-animal",
+    "source": "category:documentales"
+  },
+  {
+    "name": "NRT TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/7e43d9e239309314638f82b79b6af8ef.webp",
+    "stream_url": "https://live20.bozztv.com/giatv/giatv-nrt/nrt/chunks.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/nrt-tv",
+    "source": "category:documentales"
+  },
+  {
+    "name": "Nature Time",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/76c1f7bf76617738201aa7ad7ca01972.webp",
+    "stream_url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00090-blueantmedia-naturetime-samsungfr/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/nature-time",
+    "source": "category:documentales"
+  },
+  {
+    "name": "Xtrema TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/0b8ba4e4d62638b77f1e34a316b213e1.webp",
+    "stream_url": "https://stmv6.voxtvhd.com.br/canal1/canal1/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/xtrema-tv",
+    "source": "category:documentales"
+  },
+  {
+    "name": "Love Wine",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/999031671dfbf04262fc9c57d42b8253.webp",
+    "stream_url": "https://amg01821-lovetvchannels-lovewinespain-tivify-tivify-9ajng.amagi.tv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/love-wine",
+    "source": "category:documentales"
+  },
+  {
+    "name": "Nature Time Español",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/01dba979fbedf67fddbc197ab69608aa.webp",
+    "stream_url": "https://amg01576-blueskyeenterta-naturetimeemea-lges-afzij.amagi.tv/playlist/amg01576-blueskyeenterta-naturetimeemea-lges/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/nature-time-espanol",
+    "source": "category:documentales:page:1"
+  },
+  {
+    "name": "History Lab",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/1dd08ff2959bb19209a7a49b72765d53.webp",
+    "stream_url": "https://5f204aff97bee.streamlock.net/RTTRlive/livestream/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/history-lab",
+    "source": "category:documentales:page:1"
+  },
+  {
+    "name": "CGTN Documentary",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/9a2a9c364cd1cca23387610e626e0fa7.webp",
+    "stream_url": "https://english-livebkali.cgtn.com/live/doccgtn.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/cgtn-documentary",
+    "source": "category:documentales:page:1"
+  },
+  {
+    "name": "DW - English",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/175e2b7b8006e539c48aca9e0cf1500b.webp",
+    "stream_url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/dw-english",
+    "source": "category:documentales:page:1"
+  },
+  {
+    "name": "Free TV Saber Más",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/e494073dec0082cc7fb5310e627e31a6.webp",
+    "stream_url": "https://amg01024-olympusat-sabermas-ono-ad-d1.amagi.tv/1080p-cc/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/saber-mas",
+    "source": "category:documentales:page:1"
+  },
+  {
+    "name": "Motorvision TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/85358cbfb4c84a0eb47a98f5c9ceca01.webp",
+    "stream_url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=757",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/motorvision-tv-espanol",
+    "source": "category:documentales:page:1"
+  },
+  {
+    "name": "Adventure Earth",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/8964689ffab6b835bfc53e18f535f45d.webp",
+    "stream_url": "https://a57e9c69976649b582a8d7604c00e69a.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AdventureEarth/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/adventure-earth",
+    "source": "category:documentales:page:1"
+  },
+  {
+    "name": "Nosey Escándalos",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/2dde61405eae0d8c4cc66c7fd0532911.webp",
+    "stream_url": "https://nosey-3-us.plex.wurl.tv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/nosey-escandalos",
+    "source": "category:documentales:page:1"
+  },
+  {
+    "name": "SR Fernsehen",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/2e753ee9fed1eca3d7998807c155cf61.webp",
+    "stream_url": "https://srfs.akamaized.net/hls/live/689649/srfsgeo/master-540p-1728.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/sr-fernsehen",
+    "source": "category:documentales:page:1"
+  },
+  {
+    "name": "TV2 Nord Salto",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/f93afab217bd212b22e1f97197503c40.webp",
+    "stream_url": "https://content.jwplatform.com/live/broadcast/KFXZ5tL6.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tv2-nord-salto",
+    "source": "category:documentales:page:1"
+  },
+  {
+    "name": "Law and Crime TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/63229ccfd54091b1956faf9e645b74c7.webp",
+    "stream_url": "https://a-cdn.klowdtv.com/live3/law_720p/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/law-and-crime-tv",
+    "source": "category:documentales:page:1"
+  },
+  {
+    "name": "TRT 2",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/fe2962f88ee1a1d52a023d7552bf3f11.webp",
+    "stream_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/trt-2",
+    "source": "category:documentales:page:1"
+  },
+  {
+    "name": "Nature Time Brasil",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/36b9a94ddc438e8487acba9bc7871adb.webp",
+    "stream_url": "https://amg01576-amg01576c12-plex-us-11251.playouts.now.amagi.tv/1080p-cc-por/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/nature-time-brasil",
+    "source": "category:documentales:page:2"
+  },
+  {
+    "name": "Surf Cinema",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/1102a03699a66e2eea64c375aa738c9a.webp",
+    "stream_url": "https://amg13231-actve-amg13231c4-plex-us-1821.playouts.now.amagi.tv/acTVe-surfer-ono/playlist1080P.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/surf-cinema",
+    "source": "category:documentales:page:2"
+  },
+  {
+    "name": "Wild Earth",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/fa9ce50e5372b0370d861138ca7e935f.webp",
+    "stream_url": "https://wildearth-plex.amagi.tv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/wild-earth",
+    "source": "category:documentales:page:2"
+  },
+  {
+    "name": "Telecondor",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/a0ad17cee2ecc5963268d9ad1f328719.webp",
+    "stream_url": "https://videostream.shockmedia.com.ar:19360/canal4telecondor/canal4telecondor.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/telecondor",
+    "source": "category:documentales:page:2"
+  },
+  {
+    "name": "Al Jazeera Documentary",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/baddfc8370c837760f60cd223c2ad7be.webp",
+    "stream_url": "https://live-hls-web-aja-gcp.thehlive.com/AJA/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/al-jazeera-doc",
+    "source": "category:documentales:page:2"
+  },
+  {
+    "name": "DW - Arabia",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/7611b6ed87e31d238178569d17a326aa.webp",
+    "stream_url": "https://dwamdstream103.akamaized.net/hls/live/2015526/dwstream103/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/dw-arabia",
+    "source": "category:documentales:page:2"
+  },
+  {
+    "name": "The Bob Ross Channel",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/735ace50f7899ae7a7296f38ddb38cfd.webp",
+    "stream_url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=13449",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/the-bob-ross-channel",
+    "source": "category:documentales:page:2"
+  },
+  {
+    "name": "RS NEWS",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/ebed41ebe2ac5b0f93cb989b6743144c.webp",
+    "stream_url": "https://video05.logicahost.com.br/rsnews/rsnews/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/rs-news",
+    "source": "category:documentales:page:2"
+  },
+  {
+    "name": "Weather Spy",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/6a9309fe1901184164369c6b83f61e4b.webp",
+    "stream_url": "https://d12gab6t5iutxf.cloudfront.net/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/weather-spy",
+    "source": "category:documentales:page:2"
+  },
+  {
+    "name": "Sobrenatural TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/3c8aa9786f48bcbd9df5c6deee82407a.webp",
+    "stream_url": "https://live.wayone.cloud:443/waytv/waytv1/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/sobrenatural-tv",
+    "source": "category:documentales:page:2"
+  },
+  {
+    "name": "People Are Awesome",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/e55d3f6f2a75879017f1850561af0d1c.webp",
+    "stream_url": "https://jukin-peopleareawesome-2-ca.samsung.wurl.tv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/people-are-awesome",
+    "source": "category:documentales:page:2"
+  },
+  {
+    "name": "TV Aurora",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/fd4c141d0fb48710c4c56fd52c9df475.webp",
+    "stream_url": "https://stream.redeaurora.com.br/public/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tv-aurora",
+    "source": "category:documentales:page:2"
+  },
+  {
+    "name": "Nature Moments",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/47ff86ab438840e653f540bac4609019.webp",
+    "stream_url": "https://amg01576-amg01576c2-plex-us-11428.playouts.now.amagi.tv/1080p-cc/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/nature-moments",
+    "source": "category:documentales:page:2"
+  },
+  {
+    "name": "ORTVWEB",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/68b394ed71ce08f0b92863a2db3f4889.webp",
+    "stream_url": "https://cdn.live.br1.jmvstream.com/webtv/AVJ-17961/playlist/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/ortvweb",
+    "source": "category:documentales:page:2"
+  },
+  {
+    "name": "TVídeoNews",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/58399bd0987147a2d4380e3a8cdbee1c.webp",
+    "stream_url": "https://video01.logicahost.com.br/tvideonews/tvideonews/chunklist_w1992804748.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tvideonews",
+    "source": "category:documentales:page:2"
+  },
+  {
+    "name": "Tv Clic Brasil",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/c66c33d8c6135b087c6bde8136c41755.webp",
+    "stream_url": "https://video09.logicahost.com.br/tvclicbrasil/tvclicbrasil/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tv-clic-brasil",
+    "source": "category:documentales:page:3"
+  },
+  {
+    "name": "BBC Earth",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/f6710d872d321a358ac394d73309c82a.webp",
+    "stream_url": "https://aegis-cloudfront-1.tubi.video/bb1fc6ad-9948-42ea-aaf3-20acfcdeecac/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/bbc-earth",
+    "source": "category:documentales:page:3"
+  },
+  {
+    "name": "BBC Four",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/e88f24dd833904f5f6019877856e8cf1.webp",
+    "stream_url": "https://streamer.nexyl.uk/48559ccd-6400-457d-8acc-06b9e24c2ed8.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/bbc-four",
+    "source": "category:documentales:page:3"
+  },
+  {
+    "name": "BBC Two",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/55eaed28a8af142d57400f8222ffe314.webp",
+    "stream_url": "https://streamer.nexyl.uk/69ef899e-8ca9-4537-9f1a-fe8b4216afbb.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/bbc-two",
+    "source": "category:documentales:page:3"
+  },
+  {
+    "name": "Milennio Tv",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/91755f051c2778068efc2728f71989d6.webp",
+    "stream_url": "https://videostream.shockmedia.com.ar:19360/milenniotv/milenniotv.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/milennio-tv",
+    "source": "category:documentales:page:3"
+  },
+  {
+    "name": "Phoenix TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/e4301b73c85677d73dcce36fb3e33f5f.webp",
+    "stream_url": "https://video01.soultv.com.br/phoenixtv/phoenixtv/chunklist_w1258883718.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/phoenix-tv",
+    "source": "category:documentales:page:3"
+  },
+  {
+    "name": "TRT Belgesel",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/59c91daed8da43a1c8d858ea04aeda5c.webp",
+    "stream_url": "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/trt-belgesel",
+    "source": "category:documentales:page:3"
+  },
+  {
+    "name": "True Crime",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/6555db351697a64f1432c20888c7605e.webp",
+    "stream_url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=3985",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/true-crime",
+    "source": "category:documentales:page:3"
+  },
+  {
+    "name": "Vivam Web Tv",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/a40b87342e5dcbbcefdabd74fd5ffefd.webp",
+    "stream_url": "https://stmv1.liveplushd.com.br/tvvivam/tvvivam/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/vivam-web-tv",
+    "source": "category:documentales:page:3"
+  },
+  {
+    "name": "Canal 13 Cultura",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/a64825f6e75f29a29c6965d52f626e52.webp",
+    "stream_url": "https://dai.google.com/linear/hls/event/GI-9cp_bT8KcerLpZwkuhw/master.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/canal-13-cultura",
+    "source": "language:espanol:page:7"
+  },
+  {
+    "name": "Déjate de Historias TV",
+    "logo": "https://graph.facebook.com/DejateDeHistoriasTV/picture?width=200&height=200",
+    "stream_url": "https://limited44.todostreaming.es/live/dejatedeh-livestream.m3u8",
+    "page_url": "https://globoview.cam/directorio/espana/dejate-de-historias-tv/",
+    "source": "globoview:tdt-online",
+    "local_logo": "./logos/d-jate-de-historias-tv.webp"
+  }
+]

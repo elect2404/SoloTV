@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>IPTV Player Premium</title>
+    <meta name="description" content="Mira cientos de canales de televisión en vivo y películas gratis con nuestro reproductor IPTV de alto rendimiento.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- HLS.js for IPTV Streaming -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ed2c25">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(reg => console.log('Service Worker registrado', reg))
+                    .catch(err => console.log('Error registrando SW', err));
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <i class="fa-solid fa-play-circle logo-icon"></i>
+            <span>IPTV Premium</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" id="link-all" data-tab="all" class="active"><i class="fa-solid fa-list"></i> Todos los Canales</a></li>
+            <li><a href="#" id="link-movies" data-tab="movies"><i class="fa-solid fa-film"></i> Películas</a></li>
+            <li><a href="#" id="link-documentaries" data-tab="documentaries"><i class="fa-solid fa-globe"></i> Documentales</a></li>
+            <li><a href="#" id="link-news" data-tab="news"><i class="fa-solid fa-newspaper"></i> Noticias</a></li>
+            <li><a href="#" id="link-sports" data-tab="sports"><i class="fa-solid fa-trophy"></i> Deportes</a></li>
+            <li><a href="#" id="link-favorites" data-tab="favorites"><i class="fa-solid fa-heart"></i> Favoritos</a></li>
+        </ul>
+        <div class="sidebar-section-title" id="title-countries">Filtrar por País</div>
+        <ul class="nav-links" id="countries-list">
+            <!-- Dynamically populated countries -->
+        </ul>
+        <div class="sidebar-section-title" id="title-languages">Filtrar por Idioma</div>
+        <ul class="nav-links" id="languages-list">
+            <!-- Dynamically populated languages -->
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <header class="top-header">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="search-input" placeholder="Buscar canal por nombre..." autocomplete="off">
+            </div>
+            <div class="header-actions">
+                <button id="view-mode-toggle" title="Cambiar Vista" class="action-btn">
+                    <i class="fa-solid fa-grip"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Dynamic Category Header Banner -->
+        <div class="category-banner" id="category-banner">
+            <h1 id="category-title">Todos los Canales</h1>
+            <p id="category-desc">Explora nuestra colección completa de transmisiones en vivo.</p>
+        </div>
+
+        <!-- Channels Grid / List -->
+        <div class="grid-container">
+            <div class="grid" id="channels-grid">
+                <!-- Channels will be loaded dynamically -->
+            </div>
+            
+            <!-- Empty State -->
+            <div id="empty-state" class="empty-state" style="display: none;">
+                <i class="fa-solid fa-tv"></i>
+                <h3>No se encontraron canales</h3>
+                <p>Intenta ajustar tu búsqueda o tus filtros.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Video Player Modal -->
+    <div id="player-modal" class="modal">
+        <div class="modal-content">
+            <header class="modal-header">
+                <div class="modal-channel-info">
+                    <img id="modal-channel-logo" src="" alt="Logo">
+                    <h3 id="modal-channel-title">Canal</h3>
+                </div>
+                <div class="modal-actions">
+                    <button id="modal-fav-btn" class="modal-action-btn" title="Añadir a Favoritos">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <button class="close-modal" id="close-player-modal" title="Cerrar Reproductor">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </header>
+            <div class="video-wrapper">
+                <video id="video-player" controls preload="auto" autoplay playsinline></video>
+                <div id="player-error" class="player-error" style="display: none;">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <p>El canal no está disponible en este momento.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

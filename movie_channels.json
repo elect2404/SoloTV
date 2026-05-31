@@ -1,0 +1,885 @@
+[
+  {
+    "name": "TVS Retro",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/a39ae0962d6b0b34320db480996652b7.webp",
+    "stream_url": "https://cdn.streamhispanatv.net:3531/live/tvsretrogtlive.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tvs-retro",
+    "source": "category:cine"
+  },
+  {
+    "name": "Teleclásica",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/8d518c7a8b190f28137df6e531fe842e.webp",
+    "stream_url": "https://stmv7.voxtvhd.com.br/teleclasica/teleclasica/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tele-clasicos",
+    "source": "category:cine"
+  },
+  {
+    "name": "Cine Romántico",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/61bf055c59234dcf9591c1c8cb3657b4.webp",
+    "stream_url": "https://amg00658-amg00658c66-canelatv-international-5554.playouts.now.amagi.tv/playlist/amg00658-canelamediafast-cineromanticoappta-canelatvinternational/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/cine-romantico",
+    "source": "category:cine"
+  },
+  {
+    "name": "Canela Cinema",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/efea896119450ed5bdc725f270cf31ec.webp",
+    "stream_url": "https://amg00658-amg00658c8-canelatv-international-7227.playouts.now.amagi.tv/playlist/amg00658-canelamediafast-cinemalt-canelatvinternational/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/canela-cinema",
+    "source": "category:cine"
+  },
+  {
+    "name": "Telemundo Acción",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/14380b6fcd3d8d72b9a4003e0afd05be.webp",
+    "stream_url": "https://d3rciv7av2te5a.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-plex/master.m3u8?ads.xumo_channelId=88889470",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/telemundo-accion",
+    "source": "category:cine"
+  },
+  {
+    "name": "Retro Plus TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/466deabbd42d619f75a9134701c3e39b.webp",
+    "stream_url": "https://scl.edge.grupoz.cl/retroplustvuno/live/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/retro-plus-tv",
+    "source": "category:cine"
+  },
+  {
+    "name": "Xtrema TV - Cine Acción",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/16f8ed90cfdce23eb93131280ab06426.webp",
+    "stream_url": "https://stmv6.voxtvhd.com.br/cineaccion/cineaccion/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/xtrema-tv-cine-accion",
+    "source": "category:cine"
+  },
+  {
+    "name": "FilmRise Películas Gratis",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/e793cb4dc38511f11aa456db33a7a866.webp",
+    "stream_url": "https://d3rciv7av2te5a.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-plex/master.m3u8?ads.xumo_channelId=88889309",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/filmrise-peliculas-gratis",
+    "source": "category:cine"
+  },
+  {
+    "name": "Pelimex",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/888486b6af657ca96c36ad57c7c7ee10.webp",
+    "stream_url": "https://amg00658-amg00658c95-canelatv-international-6696.playouts.now.amagi.tv/playlist/amg00658-canelamediafast-pelimexta-canelatvinternational/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/pelimex",
+    "source": "category:cine"
+  },
+  {
+    "name": "Cariñosa TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/47ac07aab03b6b374cf69559675aa648.webp",
+    "stream_url": "https://cloud2.streaminglivehd.com:1936/carinosatv/carinosatv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/carinosa-tv",
+    "source": "category:cine"
+  },
+  {
+    "name": "Runtime Español",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/bb42115ec41fea4ac36dec93b294d2e2.webp",
+    "stream_url": "https://run-rt-uh.otteravision.com/run/rt_uh/rt_uh_720.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/runtime-espanol",
+    "source": "category:cine"
+  },
+  {
+    "name": "Canela TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/86d786223e6cb417c86e17d4d7e61bc6.webp",
+    "stream_url": "https://amg00658-amg00658c108-canelatv-international-7664.playouts.now.amagi.tv/playlist/amg00658-canelamediafast-canelatvlatamapp-canelatvinternational/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/canela-tv",
+    "source": "category:cine"
+  },
+  {
+    "name": "Grjngo Español",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/8733d77d3a29296b066646316f579c48.webp",
+    "stream_url": "https://amogonetworx-grjngo-2-eu.plex.wurl.tv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/grjngo-espanol",
+    "source": "category:cine"
+  },
+  {
+    "name": "Web Tv Cine",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/0d8ea456a45f1f4837ffb24db7646f8f.webp",
+    "stream_url": "https://stmv1.srvif.com/tvserie/tvserie/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/web-tv-cine",
+    "source": "category:cine"
+  },
+  {
+    "name": "Retro Plus Tv 3",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/655f7192ce580c733dda2fd1fc4f202b.webp",
+    "stream_url": "https://tls-cl.cdnz.cl/retroplustvtres/live/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/retro-plus",
+    "source": "category:cine"
+  },
+  {
+    "name": "Kanade Chile",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/720e714bf4a182426448196aa78ac5d5.webp",
+    "stream_url": "https://backend.energeek.cl/webtv/kanadeweb/tracks-v1a1/mono.m3u8?token=deM0kanADeweB",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/kanade-chile",
+    "source": "category:cine"
+  },
+  {
+    "name": "Runtime Clásicos",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/586386166b8d99d95d88a028fa229159.webp",
+    "stream_url": "https://run-cl-es.otteravision.com/run/cl_es/cl_es_720.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/runtime-clasicos",
+    "source": "category:cine"
+  },
+  {
+    "name": "Runtime Acción",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/11891ee8913e61a918d8a4e559d4e082.webp",
+    "stream_url": "https://run-ra-es.otteravision.com/run/ra_es/ra_es_720.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/runtime-accion",
+    "source": "category:cine"
+  },
+  {
+    "name": "Cine Friki",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/8f667db78acfeca3e792be86616ee96f.webp",
+    "stream_url": "https://zylo-cinefriki-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-zylo-cinefriki-rakuten/CDN/master.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/cine-friki",
+    "source": "category:cine"
+  },
+  {
+    "name": "Mega Cine",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/5b157c3c4e4df514dab25bcb6e5d53cc.webp",
+    "stream_url": "https://cnn.hostlagarto.com/megacinetv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/mega-cine",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "Runtime Español - Cine Y Series",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/4105f4374c811c5e233dddb029e79c0d.webp",
+    "stream_url": "https://run-rt-es.otteravision.com/run/rt_es/rt_es_720p_high.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/runtime-espanol-cine-y-series",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "Western Bound",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/7b29c59b448d2930ce7045924cfbc1df.webp",
+    "stream_url": "https://ime-cw.otteravision.com/ime/cw/cw_720p.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/western-bound",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "Free TV Acción",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/0e3bb923a6e42d39bca3d8b1869e2eb3.webp",
+    "stream_url": "https://amg01024-olympusat-topcinelatam-ono-ad-99.amagi.tv/1080p-cc/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/free-tv-accion",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "Tv Clássicos",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/fe290cfa853a15cfac44bb1bf2e924af.webp",
+    "stream_url": "https://stmv2.painelvideocast.com.br/multicanais/multicanais/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tv-classicos",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "Multi Canais",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/38cca32010062541d346871765a20c4a.webp",
+    "stream_url": "https://stmv2.painelvideocast.com.br/multicanais/multicanais/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/multi-canais-aovivo",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "TVI Ficção",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/a464ae68b020893d77567b327533efa8.webp",
+    "stream_url": "https://video-auth1.iol.pt/live_tvi_ficcao/live_tvi_ficcao/edge_servers/tvificcao-720p/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NS8zMC8yMDI2IDEyOjIwOjQ3IFBNJmhhc2hfdmFsdWU9TjhndjdjN0VLaCt1b284aVB5alN6UT09JnZhbGlkbWludXRlcz0xNDQwJmlkPTYwM2RkMjk1LTcyMzQtNGI3NS1hYTViLTBhMGM1N2NhMmNlOA==",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tvi-ficcao",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "Clic",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/e34f4cd1d9f10eee2b41c6eb0045b796.webp",
+    "stream_url": "https://amg00658-amg00658c59-canelatv-international-5440.playouts.now.amagi.tv/playlist/amg00658-canelamediafast-clictvaztecaappta-canelatvinternational/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/clic",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "MyTime Movie Network (Spain)",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/21e3a56732a5a037eaceb6ef617b7aae.webp",
+    "stream_url": "https://appletree-mytimespain-rakuten.amagi.tv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/mytime-movie-network-spain",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "Canela Clásicos",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/aac2f08ae5a1c77838cc33fa483754d9.webp",
+    "stream_url": "https://amg00658-amg00658c9-canelatv-international-7219.playouts.now.amagi.tv/playlist/amg00658-canelamediafast-clasicosuslt-canelatvinternational/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/canela-clasicos",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "Rakuten tv Sci-fi",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/4091c4add779ccbf5c40eddff541ba23.webp",
+    "stream_url": "https://b0d59c8c98974e708e5ccb9a27cdfdfc.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6740/master.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/rakuten-tv-sci-fi",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "Xtrema TV - Cine Latino",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/648b8e02363dd3c97a5d0e8afd3ef60d.webp",
+    "stream_url": "https://stmv6.voxtvhd.com.br/cinelatino/cinelatino/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/xtrema-tv-cine-latino",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "Valle Nuevo TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/7f9a4c73378a25ffb9c69bf2a6e4e827.webp",
+    "stream_url": "https://stmv6.voxtvhd.com.br/vallenuevotv/vallenuevotv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/valle-nuevo-tv",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "Free TV Familia",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/7b680a8c006f286330d002cbaf60aeaf.webp",
+    "stream_url": "https://amg01024-olympusat-juntos-ono-ad-h5.amagi.tv/1080p-cc/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/free-tv-familia",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "Cindie Lite - Español",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/25faaf3db0e171a0cee03bbc6d9981b0.webp",
+    "stream_url": "https://d20xuwbyc4yoag.cloudfront.net/scheduler/scheduleMaster/387.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/cindie-lite-espanol",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "Classic Arts Showcase",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/34b6cd484508db6e25bb987700ae8d36.webp",
+    "stream_url": "https://classicarts.akamaized.net/hls/live/1024257/CAS/master.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/classic-arts-showcase",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "ARTFLIX",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/3be7068761f25745be2b8ebb20a0f26d.webp",
+    "stream_url": "https://amogonetworx-artflix-3-es.lg.wurl.tv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/artflix",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "Sony One Cinema",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/bad404e3cd39c2d21e3bc053c44691ec.webp",
+    "stream_url": "https://spt-sonyoneclassicas-1-br.samsung.wurl.tv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/sony-one-cinema",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "Canal Mas",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/438e55201f5c93fccaa8dc0897434386.webp",
+    "stream_url": "https://tv.canalmasuruguay.com/hls/canalmas.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/canal-mas",
+    "source": "category:cine:page:1"
+  },
+  {
+    "name": "Box Cinema",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/70ba7ca59223bc09b6d05514f64924ae.webp",
+    "stream_url": "https://distrib.noisypeak.com/d/K9U16RORPWBMXX3B09JH/hls3/now,-1m/1.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/box-cinema",
+    "source": "category:cine:page:2"
+  },
+  {
+    "name": "Western Bound Español",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/61b25e0ae8487ce32175516dda43a3a9.webp",
+    "stream_url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=16611",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/western-bound-espanol",
+    "source": "category:cine:page:2"
+  },
+  {
+    "name": "Free TV Clásico",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/51e560600b65af19f305f491df5d04ac.webp",
+    "stream_url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=16215",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/free-tv-clasico",
+    "source": "category:cine:page:2"
+  },
+  {
+    "name": "Acción Mexicana",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/8b3018c8d528155d9d5dd615797d6ca5.webp",
+    "stream_url": "https://amg00658-amg00658c104-canelatv-international-7980.playouts.now.amagi.tv/playlist/amg00658-canelamediafast-accionmexicana-canelatvinternational/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/accion-mexicana",
+    "source": "category:cine:page:2"
+  },
+  {
+    "name": "Free TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/abb2072bbd91067dea9ef6dd9be705de.webp",
+    "stream_url": "https://amg01024-olympusat-chiquilines-ono-ad-et.amagi.tv/1080p-cc/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/free-tv",
+    "source": "category:cine:page:2"
+  },
+  {
+    "name": "Runtime Comedia - Español",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/4ff89e686c06012903a0f2459566cf28.webp",
+    "stream_url": "https://run-rc-es.otteravision.com/run/rc_es/rc_es_720.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/runtime-comedia-espanol",
+    "source": "category:cine:page:2"
+  },
+  {
+    "name": "Rede Clouding TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/1c3207336ef93a99e4678042297cd0a6.webp",
+    "stream_url": "https://video04.logicahost.com.br/cloudingtv/cloudingtv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/rede-clone",
+    "source": "category:cine:page:2"
+  },
+  {
+    "name": "Zee Mundo",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/73fb816241c6b607aaab5bb43bb872d6.webp",
+    "stream_url": "https://amg17931-amg17931c3-ondemandkorea-amesia-4897.playouts.now.amagi.tv/playlist/amg17931-asiatvusaltdfast-zeemundo-ondemandkoreaamesia/playlist.m3u8?app_name=AmasianTV&app_store_url=https%3A%2F%2Famasian.tv&genre=Television&ic=IAB1-7&us_privacy=1---&",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/zee-mundo",
+    "source": "category:cine:page:2"
+  },
+  {
+    "name": "Distrito TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/c8a55262a4a49bd5a135035bc84a653c.webp",
+    "stream_url": "https://nlb1-live.emitstream.com/hls/3mn7wpcv7hbmxmdzaxap/master.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/distrito-tv",
+    "source": "category:cine:page:2"
+  },
+  {
+    "name": "Action Hollywood Movies",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/e72a55131ffe44f85845456ed45a407d.webp",
+    "stream_url": "https://amg01076-amg01076c4-plex-us-4787.playouts.now.amagi.tv/playlist/amg01076-lightning-actionhollywood-plexus/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/action-hollywood-movies",
+    "source": "category:cine:page:2"
+  },
+  {
+    "name": "Free TV Drama",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/508d57285ddb9547199cbede4ba72f19.webp",
+    "stream_url": "https://amg01024-olympusat-cinereallatam-ono-ad-z5.amagi.tv/1080p-cc/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/free-tv-drama",
+    "source": "category:cine:page:2"
+  },
+  {
+    "name": "Runtime Crimen 2",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/8a40c36d262b4f5ca7b67d869892f3c7.webp",
+    "stream_url": "https://run-rucrl.otteravision.com/run/rucrl/rucrl_720.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/runtime-crimen-2",
+    "source": "category:cine:page:2"
+  },
+  {
+    "name": "Free TV Sureño",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/7e030786c319ae1f2f95da18b6cf634e.webp",
+    "stream_url": "https://amg01024-olympusat-cinesureno-ono-ad-h2.amagi.tv/1080p-cc/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/free-tv-sureno",
+    "source": "category:cine:page:2"
+  },
+  {
+    "name": "Free TV Estelar",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/7dd923570b66f31b6acbffb18de481ab.webp",
+    "stream_url": "https://amg01024-olympusat-tucinelatam-ono-ad-40.amagi.tv/1080p-cc/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/free-tv-estelar",
+    "source": "category:cine:page:2"
+  },
+  {
+    "name": "Cine Western",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/039e6c4f6df0056b13bc907e64b8b66b.webp",
+    "stream_url": "https://amg00711-zylo-amg00711c8-rakuten-uk-2686.playouts.now.amagi.tv/playlist/amg00711-zylofast-cinewestern-rakutenuk/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/cine-western",
+    "source": "category:cine:page:2"
+  },
+  {
+    "name": "Moviesphere",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/b5c373a817c81c049d68ca769d1847ef.webp",
+    "stream_url": "https://samsunguk-moviesphereuk-samsung-uk-s7xaa.amagi.tv/playlist/samsunguk-moviesphereuk-samsung-uk/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/moviesphere",
+    "source": "category:cine:page:2"
+  },
+  {
+    "name": "Cinevault 80's",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/96879780f5c33998dfdc56e783bdd572.webp",
+    "stream_url": "https://gsn-cinevault-80s-2-us.roku.wurl.tv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/cinevault-80s",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "Cinevault Westerns",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/717730da1e8a6b6d5dd929caa8ced02a.webp",
+    "stream_url": "https://gsn-cinevault-westerns-2-us.roku.wurl.tv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/cinevault-westerns",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "Runtime Romance - Español",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/070aec7fcaa5f91945323fc9386162cf.webp",
+    "stream_url": "https://run-rr-es.otteravision.com/run/rr_es/rr_es_720.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/runtime-romance-espanol",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "Rakuten TV Action Movies",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/28cb1af9080355f5c6adea858ac7674f.webp",
+    "stream_url": "https://54045f0c40fd442c8b06df076aaf1e85.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6065/master.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/rakuten-tv-action-movies",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "RCM",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/515f4a64d4a7c0c1c813b11d65ee34df.webp",
+    "stream_url": "https://amg01076-amg01076c11-plex-us-4783.playouts.now.amagi.tv/playlist1080p.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/rcm",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "30A TV - Sci Fi & Spooky",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/141f7905c2cc17032ca30ab8962398ec.webp",
+    "stream_url": "https://30a-tv.com/feeds/vidaa/scifi.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/30a-tv-sci-fi",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "Runtime - France",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/e598d43eaf39f79c2fa72da53417ac6d.webp",
+    "stream_url": "https://run-rt-fr.otteravision.com/run/rt_fr/rt_fr_720p_high.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/runtime-france",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "Canal 2 - Tv Nova Juarez",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/6040bb525a1603dc1ff55b66f733864e.webp",
+    "stream_url": "https://stmv2.webtvninjas.com.br/tvnovajuarez/tvnovajuarez/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/canal-2-tv-nova-juarez",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "Rakuten TV Español",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/48a2bc5821e74c0b1861ec2287730dfe.webp",
+    "stream_url": "https://b0d59c8c98974e708e5ccb9a27cdfdfc.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6740/master.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/rakuten-tv-espanol",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "Xtrema TV - Cine Drama",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/4c9ffb33bd89b04d6c1fd9326ddcadd7.webp",
+    "stream_url": "https://stmv6.voxtvhd.com.br/cinedrama/cinedrama/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/xtrema-tv-cine-drama",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "Celestial TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/ba9007531dcf585403c0d806bed538cf.webp",
+    "stream_url": "https://kali1.everestcast.com:3371/hybrid/play.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/celestial-tv",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "Filmes Online",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/cf711b0c34fdda729cf379ba14f8cffb.webp",
+    "stream_url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=6178",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/filmes-online",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "Runtime Crimen",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/3bf4e796388b24932482e7a2043f6c0d.webp",
+    "stream_url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=3527",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/runtime-crimen",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "Runtime Familia - Español",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/d6f47c2615736b266095f9687b3f27ab.webp",
+    "stream_url": "https://run-runfl.otteravision.com/run/runfl/runfl_720.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/runtime-familia",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "Xtrema TV - Cine Asia",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/332189b8722e494b651f16c7591490c7.webp",
+    "stream_url": "https://stmv6.voxtvhd.com.br/cineasia/cineasia/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/xtrema-tv-cine-asia",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "Classique TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/f032a160e2b4cbb9de8f0080b845c9ca.webp",
+    "stream_url": "https://stmv1.srvif.com/classique/classique/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/classique-tv",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "Runtime - English",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/f37d55780687ac603e39c26592ae36a9.webp",
+    "stream_url": "https://run-rt-us.otteravision.com/out/v1/336b14e0a931466f99386ae576d30a57/index_1.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/runtime-english",
+    "source": "category:cine:page:3"
+  },
+  {
+    "name": "Tv Carioca Internacional",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/ae3270712e80a6ee4cd2dd542fcc48c6.webp",
+    "stream_url": "https://video03.logicahost.com.br/cariocainternacional1/cariocainternacional1/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tv-carioca-net",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "Escuchame Radio Tv",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/e49738a8073bf9b8d558abdeb0c17e76.webp",
+    "stream_url": "https://stmv1.transmissaodigital.com/pedro9800/pedro9800/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/escuchame-radio-tv",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "Hallmark Movies & Mysteries East",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/267cffbdc5db5058e88330d0a496a846.webp",
+    "stream_url": "https://live-content.xumo.com/2777/content/XM001DDP8HHU8D/25245583/master.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/hallmark-movies-mysteries-east",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "The Archive",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/bd7895c750f38ec7271ce5e012c58ab9.webp",
+    "stream_url": "https://cineverse.g-mana.live/media/09899328-5b22-4d3e-ba1e-111856798c99/playlist_3.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/the-archive",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "FilmRise Free Movies",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/4d8d5f0a464e1242b4fde108caaa6570.webp",
+    "stream_url": "https://d1bl6tskrpq9ze.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=99992272",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/filmrise-free-movies",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "Tebeo Tv",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/965ea388c91bb303d5621e2b4044cfde.webp",
+    "stream_url": "https://tebeo.streamakaci.tv/tebeo/tebeo-multi/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tebeo-tv",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "Runtime Trash",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/e4283d29ce7722bf2dbf3d5d55124592.webp",
+    "stream_url": "https://run-rt-tr-es.otteravision.com/run/rt_tr_es/rt_tr_es_720.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/runtime-trash",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "Rakuten TV Português",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/a1955f402ba9845900b04602e8942e4d.webp",
+    "stream_url": "https://b0d59c8c98974e708e5ccb9a27cdfdfc.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6741/master.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/rakuten-tv-portugues",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "Xtrema TV - Cine Hindi",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/c3bba42e9a945b67ba4857976265fe73.webp",
+    "stream_url": "https://stmv6.voxtvhd.com.br/cinehindi/cinehindi/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/xtrema-tv-cine-hindi",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "CinePIX TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/840254a95bac6a1f369b4d9641ef4dfa.webp",
+    "stream_url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=6178",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/cinepix-tv",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "PITAARA TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/ef63f759ffb4f1a772232f3a94fc0088.webp",
+    "stream_url": "https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/pitaara-tv",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "Bons Tempos",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/0bf29296ede8db8b9c502fba9c05cb7f.webp",
+    "stream_url": "https://stmv1.srvif.com/canal29/canal29/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/bons-tempos",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "Kuriakos Cine",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/d5e881c97b312df382164b7b7e5f5509.webp",
+    "stream_url": "https://w2.manasat.com/kcine/smil:kcine.smil/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/kuriakos-cine",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "Top Mix Tv Filmes",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/c2756e6ae8adbd01291e9c5dda56f0e3.webp",
+    "stream_url": "https://video01.logicahost.com.br/topmixtvsertanejooficial/topmixtvsertanejooficial/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/top-mix-tv-filmes",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "Xtrema TV - Cine Family",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/553ae67ca541fdc09dd6f918351f04be.webp",
+    "stream_url": "https://stmv6.voxtvhd.com.br/cinefamiliy/cinefamiliy/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/xtrema-tv-cine-family",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "Grjngo Western Movies",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/98bdba996164114f3ce285474695492d.webp",
+    "stream_url": "https://amogonetworx-grjngo-3-dk.samsung.wurl.tv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/grjngo-western-movies",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "Runtime Comédia",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/d8e9cfe9b910731a2ba29ede0a63cacd.webp",
+    "stream_url": "https://run-rc-br.otteravision.com/run/rc_br/rc_br_720.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/run-time-comedia",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "Filmelier TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/eb56bafc9a09ea999dcb21ab523b4f5f.webp",
+    "stream_url": "https://amg00740-sofa-amg00740c8-tcl-us-7180.playouts.now.amagi.tv/1080p-cc/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/filmelier-tv",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "TV CNB",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/775da338d2d26bef54d0537d28580367.webp",
+    "stream_url": "https://5cf4a2c2512a2.streamlock.net/tvcnb/tvcnb/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tv-cnb",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "Adrenalina Pura TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/8b3db993ee7151d22256f51b36ecdb43.webp",
+    "stream_url": "https://amg00740-sofa-amg00740c7-tcl-us-7126.playouts.now.amagi.tv/1080p-cc/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/adrenalina-pura-tv",
+    "source": "category:cine:page:4"
+  },
+  {
+    "name": "Electric Now",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/89edbbff34fa08f47de48f45d673d0da.webp",
+    "stream_url": "https://elec-en-xumo.otteravision.com/elec/en/elec_en.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/electric-now",
+    "source": "category:cine:page:5"
+  },
+  {
+    "name": "Tv Loading",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/1d08352f33c92124373d9f3b0fcf2ef8.webp",
+    "stream_url": "https://stmv1.srvif.com/loadingtv/loadingtv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tv-loading",
+    "source": "category:cine:page:5"
+  },
+  {
+    "name": "Gospel Movie TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/9ec2c361a5ce07ba0f7987bcd36dbb1d.webp",
+    "stream_url": "https://stmv1.srvif.com/gospelf/gospelf/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/gospel-movie-tv",
+    "source": "category:cine:page:5"
+  },
+  {
+    "name": "Web Tv Clássicos do Cinema",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/3d87816a5e2ae347287ac975afbda5ee.webp",
+    "stream_url": "https://live20.bozztv.com/giatvplayout7/giatv-208272/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/web-tv-classicos-do-cinema",
+    "source": "category:cine:page:5"
+  },
+  {
+    "name": "Lucas Tv",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/30b5156f5206356ea7e928eedcbc7667.webp",
+    "stream_url": "https://stmv1.srvif.com/lucastv/lucastv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/lucas-tv",
+    "source": "category:cine:page:5"
+  },
+  {
+    "name": "ION Plus",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/4188eb8480e53e91d86682f32682b88a.webp",
+    "stream_url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-ionplus-tablo/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/ion-plus",
+    "source": "category:cine:page:5"
+  },
+  {
+    "name": "Tv J.SID",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/0ab5f48ba024a538cd65fd54869ba8ac.webp",
+    "stream_url": "https://video05.logicahost.com.br/tvjsid/tvjsid/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tv-j-sid",
+    "source": "category:cine:page:5"
+  },
+  {
+    "name": "Tv Metropolitana Rio",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/2322d929ab7c617fbab73beb02b6d7f7.webp",
+    "stream_url": "https://stmv5.samcast.com.br/claudio8701/claudio8701/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tv-metropolitana-rio",
+    "source": "category:cine:page:5"
+  },
+  {
+    "name": "Tv Aracati HD",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/69cf38e0cd65c06291dc072f3f9270b1.webp",
+    "stream_url": "https://video04.logicahost.com.br/tvaracati/tvaracati/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tv-aracati-hd",
+    "source": "category:cine:page:5"
+  },
+  {
+    "name": "Filmrise Black TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/994a83ed7a78225ea603ae42afe22f9a.webp",
+    "stream_url": "https://live-manifest.production-public.tubi.io/live/da01f337-3ba0-4b43-b675-b0f155153fb0/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/filmrise-black-tv",
+    "source": "category:cine:page:5"
+  },
+  {
+    "name": "TV Clube RN",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/365cda8ce34a301e813ff056a9b626fe.webp",
+    "stream_url": "https://radios.braviahost.com.br:2020/hls/tvclubern/tvclubern.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tv-clube-rn",
+    "source": "category:cine:page:5"
+  },
+  {
+    "name": "Sony One Emoções",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/a314b7e30030089dbb174ed79458610d.webp",
+    "stream_url": "https://spt-sonyoneemocoes-1-br.samsung.wurl.tv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/sony-one-emocoes",
+    "source": "category:cine:page:5"
+  },
+  {
+    "name": "Tv Cidade Brasil",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/cbcbbc692ed0a16a020df7e0fd6816fa.webp",
+    "stream_url": "https://stmv2.samcast.com.br/tvcidadebrasil/tvcidadebrasil/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tv-cidade-alagoinha",
+    "source": "category:cine:page:5"
+  },
+  {
+    "name": "TV Teen Net",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/1516ed8bc7c4e6c7586e26b97a4d0a02.webp",
+    "stream_url": "https://srv5.zcast.com.br/yeeaah/yeeaah/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/tv-teen-net",
+    "source": "category:cine:page:5"
+  },
+  {
+    "name": "Popstar! TV",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/7ae691216ba3d0d77552278ba90bd92b.webp",
+    "stream_url": "https://f570dedd03914e34a94fa4d318deddb5.mediatailor.us-west-2.amazonaws.com/v1/manifest/2d2d0d97b0e548f025b2598a69b55bf30337aa0e/npp_796/4aa4b290-518d-43ca-a682-dfa79f4d72d7/4.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/popstar-tv",
+    "source": "category:cine:page:5"
+  },
+  {
+    "name": "Retro Cartoon",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/a1e4076264abe6b6ccde87a587966abe.webp",
+    "stream_url": "https://stmv1.video.brstream.com.br/retrotv/retrotv/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/retro-cartoon",
+    "source": "category:ninos"
+  },
+  {
+    "name": "RetroCrush",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/43eb3c8c2eb5172ddd45fbaa5d2e06cc.webp",
+    "stream_url": "https://cineverse.g-mana.live/media/ac7cff3c-5bc3-4745-ac4d-56aadb586d00/profile/1/profileManifest.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/retrocrush",
+    "source": "category:ninos"
+  },
+  {
+    "name": "Xtrema TV - Retro Cartoons",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/bc4b7e61e1dc1d6e21310964acd99139.webp",
+    "stream_url": "https://stmv3.voxtvhd.com.br/xtremaretrocartoons/xtremaretrocartoons/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/xtrema-tv-retro-cartoons",
+    "source": "category:ninos:page:1"
+  },
+  {
+    "name": "Xtrema TV - Cartoons",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/def4d6a960fc00da49db5898c4a41e48.webp",
+    "stream_url": "https://stmv6.voxtvhd.com.br/xtremacartoons/xtremacartoons/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/xtrema-tv-cartoons",
+    "source": "category:ninos:page:1"
+  },
+  {
+    "name": "Gospel Cartoon",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/f0a3c3c7b9a651e847d86dd71bbb5551.webp",
+    "stream_url": "https://stmv1.srvif.com/gospelcartoon/gospelcartoon/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/gospel-cartoon",
+    "source": "category:ninos:page:3"
+  },
+  {
+    "name": "Cine Kids",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/eb23903cf0a778ea0a667ba01a9a8d05.webp",
+    "stream_url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=3506",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/cine-kids",
+    "source": "category:ninos:page:4"
+  },
+  {
+    "name": "Surf Cinema",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/1102a03699a66e2eea64c375aa738c9a.webp",
+    "stream_url": "https://amg13231-actve-amg13231c4-plex-us-1821.playouts.now.amagi.tv/acTVe-surfer-ono/playlist1080P.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/surf-cinema",
+    "source": "category:documentales:page:2"
+  },
+  {
+    "name": "The Retro Channel",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/f596e37208c32386b7be64b6697e30fb.webp",
+    "stream_url": "https://583ed2f226ac2.streamlock.net/theretrochannel/stream/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/the-retro-channel",
+    "source": "category:musica"
+  },
+  {
+    "name": "Retro Music Television",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/679ef1095203385524a32b56aeef1f8d.webp",
+    "stream_url": "https://newstream.mediawork.cz/retrotv/smil:retrotv_new.smil/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/retro-music-television",
+    "source": "category:musica"
+  },
+  {
+    "name": "Retro Plus Tv 2",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/2adc9ba45304258216fdecbbf9215a4f.webp",
+    "stream_url": "https://tls-cl.cdnz.cl/retroplustvdos/live/playlist.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/retro-plus-tv-2",
+    "source": "category:musica:page:1"
+  },
+  {
+    "name": "Runtime Rebelde",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/aa8655e78c75dff69283c942d86500b5.webp",
+    "stream_url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=16288",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/runtime-rebelde",
+    "source": "category:telenovelas"
+  },
+  {
+    "name": "Runtime Series",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/06acaf44808e3e907bf7fd369add33b0.webp",
+    "stream_url": "https://run-rss.otteravision.com/run/rss/rss_720.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/runtime-series",
+    "source": "category:serie:page:1"
+  },
+  {
+    "name": "Runtime - Curro Jiménez",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/71f6611eef3bf1a9db1f7a3bc78380ec.webp",
+    "stream_url": "https://run-cj-es.otteravision.com/run/cj_es/cj_es_720.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/runtime-curro-jimenez",
+    "source": "category:serie:page:2"
+  },
+  {
+    "name": "Runtime - Ana y Los 7",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/1b5d9fc2746ae2fe19c15e562a4540ae.webp",
+    "stream_url": "https://run-al-es.otteravision.com/run/al_es/al_es_720.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/ana-y-los-siete",
+    "source": "category:serie:page:3"
+  },
+  {
+    "name": "FilmRise Séries Gratuitas",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/d14f93731e74194bccfccf86df7e019f.webp",
+    "stream_url": "https://d3rciv7av2te5a.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-plex/master.m3u8?ads.xumo_channelId=88889320",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/filmrise-series-gratuitas",
+    "source": "category:serie:page:3"
+  },
+  {
+    "name": "Filmrise Dr.G. Medical Examiner",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/2f8c7ab762f85cee065f205bb0665ae8.webp",
+    "stream_url": "https://d39g1vxj2ef6in.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/master.m3u8?ads.xumo_channelId=88883008",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/filmrise-dr-g-medical-examiner",
+    "source": "category:serie:page:4"
+  },
+  {
+    "name": "Filmrise Unsolved Mysteries",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/99c30351cc0c588fc811afa1cdab4565.webp",
+    "stream_url": "https://d31z96rdrmwfsp.cloudfront.net/master.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/filmrise-unsolved-mysteries",
+    "source": "category:serie:page:4"
+  },
+  {
+    "name": "Filmrise Forensic Files",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/05d77211ba4d7918f22279956242d21b.webp",
+    "stream_url": "https://livetv-fa.tubi.video/forensic-files/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/filmrise-forensic-files",
+    "source": "category:serie:page:5"
+  },
+  {
+    "name": "FilmRise True Crime",
+    "logo": "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/0cdf44295bdcaa3bb152b2e55b1791e4.webp",
+    "stream_url": "https://livetv-fa.tubi.video/filmrise-true-crime/index.m3u8",
+    "page_url": "https://www.cxtvenvivo.com/tv-en-vivo/filmrise-true-crime",
+    "source": "category:serie:page:5"
+  },
+  {
+    "name": "Somos Cine (RTVE)",
+    "logo": "https://graph.facebook.com/rtveplay/picture?width=200&height=200",
+    "stream_url": "https://ztnr.rtve.es/ztnr/6909845.m3u8",
+    "page_url": "https://globoview.cam/directorio/espana/somos-cine-rtve/",
+    "source": "globoview:tdt-online",
+    "local_logo": "./logos/somos-cine-rtve-.webp"
+  }
+]

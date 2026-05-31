@@ -1,0 +1,22 @@
+{
+  "name": "IPTV Player Premium",
+  "short_name": "IPTV Premium",
+  "description": "Reproductor IPTV moderno para canales y películas en vivo.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0a0a0c",
+  "theme-color": "#ed2c25",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "logos/default.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logos/default.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
