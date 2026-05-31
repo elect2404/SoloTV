@@ -334,11 +334,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     <i class="${isFav ? 'fa-solid' : 'fa-regular'} fa-heart"></i>
                 </button>
                 <div class="card-logo-container">
-                    <img class="card-logo" src="${logoPath || 'logos/default.png'}" alt="${ch.name}" loading="lazy" onerror="this.src='https://placehold.co/120x120/1a1a24/ffffff?text=TV'">
+                    <img class="card-logo" src="${logoPath || 'logos/default.png'}" alt="${ch.name}" loading="lazy">
                 </div>
                 <div class="card-title" title="${ch.name}">${ch.name}</div>
                 <div class="card-source">${ch.language}</div>
             `;
+
+            // Robust Image Fallback Handler (local -> remote -> placeholder)
+            const cardImg = card.querySelector('.card-logo');
+            cardImg.onerror = () => {
+                if (ch.local_logo && ch.logo && !cardImg.src.includes(ch.logo)) {
+                    cardImg.src = ch.logo;
+                } else {
+                    cardImg.src = 'https://placehold.co/120x120/1a1a24/ffffff?text=TV';
+                }
+            };
 
             // Card Click Handler
             card.addEventListener('click', (e) => {
@@ -503,7 +513,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function openPlayer(ch) {
         modalChannelTitle.innerText = ch.name;
         modalChannelLogo.src = ch.local_logo ? ch.local_logo : ch.logo;
-        modalChannelLogo.onerror = () => { modalChannelLogo.src = 'https://placehold.co/120x120/1a1a24/ffffff?text=TV'; };
+        modalChannelLogo.onerror = () => {
+            if (ch.local_logo && ch.logo && !modalChannelLogo.src.includes(ch.logo)) {
+                modalChannelLogo.src = ch.logo;
+            } else {
+                modalChannelLogo.src = 'https://placehold.co/120x120/1a1a24/ffffff?text=TV';
+            }
+        };
         
         // Favorite state in Modal
         const isFav = favorites.some(fav => fav.page_url === ch.page_url);
