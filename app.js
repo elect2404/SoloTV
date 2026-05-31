@@ -383,6 +383,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.classList.add('active');
 
                 currentTab = link.getAttribute('data-tab');
+                // Reset search query when changing sections
+                searchInput.value = '';
+                
                 applyFiltersAndSearch();
                 window.scrollTo(0, 0);
                 document.documentElement.scrollTop = 0;
