@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let filteredChannels = [];
     let favorites = JSON.parse(localStorage.getItem('iptv_favorites')) || [];
     let currentTab = 'all'; // 'all', 'movies', 'documentaries', 'favorites', 'country:<name>', 'lang:<name>'
-    let viewMode = localStorage.getItem('iptv_view_mode') || 'grid'; // 'grid', 'list'
     let hlsPlayer = null;
     let isPlayerHistoryPushed = false;
     const countryNames = {
@@ -39,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');
     const menuToggle = document.getElementById('menu-toggle');
     const sidebar = document.getElementById('sidebar');
-    const viewModeToggle = document.getElementById('view-mode-toggle');
     
     const categoryTitle = document.getElementById('category-title');
     const categoryDesc = document.getElementById('category-desc');
@@ -166,7 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('title-languages').innerText = t.filterLanguage;
         
         searchInput.placeholder = t.searchPlaceholder;
-        viewModeToggle.title = t.changeView;
         closePlayerModal.title = t.closePlayer;
         modalFavBtn.title = t.addFav;
 
@@ -356,11 +353,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         emptyState.style.display = 'none';
         channelsGrid.style.display = 'grid';
-        if (viewMode === 'list') {
-            channelsGrid.classList.add('list-mode');
-        } else {
-            channelsGrid.classList.remove('list-mode');
-        }
 
         filteredChannels.forEach(ch => {
             const card = document.createElement('div');
@@ -534,21 +526,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     searchInput.addEventListener('blur', () => {
         searchInput.readOnly = true;
-    });
-
-    // 7. View Mode toggle (Grid / List)
-    viewModeToggle.addEventListener('click', () => {
-        viewMode = viewMode === 'grid' ? 'list' : 'grid';
-        localStorage.setItem('iptv_view_mode', viewMode);
-        
-        const icon = viewModeToggle.querySelector('i');
-        if (viewMode === 'grid') {
-            icon.className = 'fa-solid fa-grip';
-        } else {
-            icon.className = 'fa-solid fa-list';
-        }
-
-        renderChannels();
     });
 
     // 8. Toggle Favorites
@@ -783,7 +760,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const isMenuToggleVisible = () => window.getComputedStyle(menuToggle).display !== 'none';
 
         // Case 1: Nothing focused or focused on body/unknown element (Route directly to channels)
-        if (!activeElement || activeElement === document.body || (!sidebarLinks.includes(activeElement) && !cards.includes(activeElement) && activeElement !== searchInput && activeElement !== viewModeToggle && activeElement !== exitBtn && activeElement !== menuToggle)) {
+        if (!activeElement || activeElement === document.body || (!sidebarLinks.includes(activeElement) && !cards.includes(activeElement) && activeElement !== searchInput && activeElement !== exitBtn && activeElement !== menuToggle)) {
             if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
                 if (cards.length > 0) {
                     cards[0].focus();
@@ -840,29 +817,17 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (e.key === 'ArrowUp') {
                 if (isMenuToggleVisible()) {
                     menuToggle.focus();
-                } else {
-                    viewModeToggle.focus();
                 }
-                e.preventDefault();
-            } else if (e.key === 'ArrowRight') {
-                viewModeToggle.focus();
                 e.preventDefault();
             }
             return;
         }
 
         // Case 4: Top Action Buttons (including menu toggle) are focused
-        if (activeElement === menuToggle || activeElement === viewModeToggle || activeElement === exitBtn) {
+        if (activeElement === menuToggle || activeElement === exitBtn) {
             if (e.key === 'ArrowLeft') {
                 if (activeElement === exitBtn) {
-                    viewModeToggle.focus();
-                } else if (activeElement === viewModeToggle) {
-                    if (isMenuToggleVisible()) {
-                        menuToggle.focus();
-                    } else {
-                        const activeSidebar = document.querySelector('.sidebar .nav-links a.active') || sidebarLinks[0];
-                        if (activeSidebar) activeSidebar.focus();
-                    }
+                    searchInput.focus();
                 } else if (activeElement === menuToggle) {
                     const activeSidebar = document.querySelector('.sidebar .nav-links a.active') || sidebarLinks[0];
                     if (activeSidebar) activeSidebar.focus();
@@ -870,9 +835,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
             } else if (e.key === 'ArrowRight') {
                 if (activeElement === menuToggle) {
-                    viewModeToggle.focus();
-                } else if (activeElement === viewModeToggle) {
-                    exitBtn.focus();
+                    searchInput.focus();
                 }
                 e.preventDefault();
             } else if (e.key === 'ArrowDown') {
