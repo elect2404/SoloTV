@@ -375,11 +375,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Robust Image Fallback Handler (local -> remote -> placeholder)
             const cardImg = card.querySelector('.card-logo');
-            cardImg.onerror = () => {
-                if (ch.local_logo && ch.logo && !cardImg.src.includes(ch.logo)) {
-                    cardImg.src = ch.logo;
+            cardImg.onerror = function() {
+                if (ch.local_logo && ch.logo && !this.src.includes(ch.logo)) {
+                    this.src = ch.logo;
+                } else if (!this.src.includes('logos/default.png')) {
+                    this.src = 'logos/default.png';
                 } else {
-                    cardImg.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><rect width="120" height="120" fill="%231a1a24"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="40" fill="%23ffffff">TV</text></svg>';
+                    this.onerror = null;
                 }
             };
 
@@ -552,11 +554,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function openPlayer(ch) {
         modalChannelTitle.innerText = ch.name;
         modalChannelLogo.src = ch.local_logo ? ch.local_logo : ch.logo;
-        modalChannelLogo.onerror = () => {
-            if (ch.local_logo && ch.logo && !modalChannelLogo.src.includes(ch.logo)) {
-                modalChannelLogo.src = ch.logo;
+        modalChannelLogo.onerror = function() {
+            if (ch.local_logo && ch.logo && !this.src.includes(ch.logo)) {
+                this.src = ch.logo;
+            } else if (!this.src.includes('logos/default.png')) {
+                this.src = 'logos/default.png';
             } else {
-                modalChannelLogo.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><rect width="120" height="120" fill="%231a1a24"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="40" fill="%23ffffff">TV</text></svg>';
+                this.onerror = null;
             }
         };
         
