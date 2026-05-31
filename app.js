@@ -677,8 +677,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const sidebarLinks = getSidebarLinks();
         const cards = getCards();
         
+        const isMenuToggleVisible = () => window.getComputedStyle(menuToggle).display !== 'none';
+
         // Case 1: Nothing focused or focused on body/unknown element
-        if (!activeElement || activeElement === document.body || (!sidebarLinks.includes(activeElement) && !cards.includes(activeElement) && activeElement !== searchInput && activeElement !== viewModeToggle && activeElement !== exitBtn)) {
+        if (!activeElement || activeElement === document.body || (!sidebarLinks.includes(activeElement) && !cards.includes(activeElement) && activeElement !== searchInput && activeElement !== viewModeToggle && activeElement !== exitBtn && activeElement !== menuToggle)) {
             if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
                 const activeSidebar = document.querySelector('.sidebar .nav-links a.active');
                 if (activeSidebar) {
@@ -705,7 +707,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 e.preventDefault();
             } else if (e.key === 'ArrowRight') {
-                if (cards.length > 0) {
+                if (isMenuToggleVisible()) {
+                    menuToggle.focus();
+                } else if (cards.length > 0) {
                     cards[0].focus();
                 } else {
                     searchInput.focus();
@@ -726,25 +730,41 @@ document.addEventListener('DOMContentLoaded', () => {
                     cards[0].focus();
                 }
                 e.preventDefault();
-            } else if (e.key === 'ArrowUp' || e.key === 'ArrowRight') {
+            } else if (e.key === 'ArrowUp') {
+                if (isMenuToggleVisible()) {
+                    menuToggle.focus();
+                } else {
+                    viewModeToggle.focus();
+                }
+                e.preventDefault();
+            } else if (e.key === 'ArrowRight') {
                 viewModeToggle.focus();
                 e.preventDefault();
             }
             return;
         }
 
-        // Case 4: Top Action Buttons are focused
-        if (activeElement === viewModeToggle || activeElement === exitBtn) {
+        // Case 4: Top Action Buttons (including menu toggle) are focused
+        if (activeElement === menuToggle || activeElement === viewModeToggle || activeElement === exitBtn) {
             if (e.key === 'ArrowLeft') {
                 if (activeElement === exitBtn) {
                     viewModeToggle.focus();
-                } else {
+                } else if (activeElement === viewModeToggle) {
+                    if (isMenuToggleVisible()) {
+                        menuToggle.focus();
+                    } else {
+                        const activeSidebar = document.querySelector('.sidebar .nav-links a.active') || sidebarLinks[0];
+                        if (activeSidebar) activeSidebar.focus();
+                    }
+                } else if (activeElement === menuToggle) {
                     const activeSidebar = document.querySelector('.sidebar .nav-links a.active') || sidebarLinks[0];
                     if (activeSidebar) activeSidebar.focus();
                 }
                 e.preventDefault();
             } else if (e.key === 'ArrowRight') {
-                if (activeElement === viewModeToggle) {
+                if (activeElement === menuToggle) {
+                    viewModeToggle.focus();
+                } else if (activeElement === viewModeToggle) {
                     exitBtn.focus();
                 }
                 e.preventDefault();
