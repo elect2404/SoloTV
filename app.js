@@ -367,23 +367,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     <i class="${isFav ? 'fa-solid' : 'fa-regular'} fa-heart"></i>
                 </button>
                 <div class="card-logo-container">
-                    <img class="card-logo" src="${logoPath || 'logos/default.png'}" alt="${ch.name}" loading="lazy">
+                    <img class="card-logo" src="${logoPath || 'logos/default.png'}" alt="${ch.name}" loading="lazy" onerror="this.onerror=null; this.src='logos/default.png';">
                 </div>
                 <div class="card-title" title="${ch.name}">${ch.name}</div>
                 <div class="card-source">${ch.language}</div>
             `;
-
-            // Robust Image Fallback Handler (local -> remote -> placeholder)
-            const cardImg = card.querySelector('.card-logo');
-            cardImg.onerror = function() {
-                if (ch.local_logo && ch.logo && !this.src.includes(ch.logo)) {
-                    this.src = ch.logo;
-                } else if (!this.src.includes('logos/default.png')) {
-                    this.src = 'logos/default.png';
-                } else {
-                    this.onerror = null;
-                }
-            };
 
             // Card Click Handler
             card.addEventListener('click', (e) => {
@@ -554,15 +542,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function openPlayer(ch) {
         modalChannelTitle.innerText = ch.name;
         modalChannelLogo.src = ch.local_logo ? ch.local_logo : ch.logo;
-        modalChannelLogo.onerror = function() {
-            if (ch.local_logo && ch.logo && !this.src.includes(ch.logo)) {
-                this.src = ch.logo;
-            } else if (!this.src.includes('logos/default.png')) {
-                this.src = 'logos/default.png';
-            } else {
-                this.onerror = null;
-            }
-        };
+        modalChannelLogo.setAttribute('onerror', "this.onerror=null; this.src='logos/default.png';");
         
         // Favorite state in Modal
         const isFav = favorites.some(fav => fav.page_url === ch.page_url);
