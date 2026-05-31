@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (ch.local_logo && ch.logo && !cardImg.src.includes(ch.logo)) {
                     cardImg.src = ch.logo;
                 } else {
-                    cardImg.src = 'https://placehold.co/120x120/1a1a24/ffffff?text=TV';
+                    cardImg.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><rect width="120" height="120" fill="%231a1a24"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="40" fill="%23ffffff">TV</text></svg>';
                 }
             };
 
@@ -556,7 +556,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (ch.local_logo && ch.logo && !modalChannelLogo.src.includes(ch.logo)) {
                 modalChannelLogo.src = ch.logo;
             } else {
-                modalChannelLogo.src = 'https://placehold.co/120x120/1a1a24/ffffff?text=TV';
+                modalChannelLogo.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><rect width="120" height="120" fill="%231a1a24"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="40" fill="%23ffffff">TV</text></svg>';
             }
         };
         
