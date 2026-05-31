@@ -172,6 +172,19 @@ body {
     transition: var(--transition);
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sub-header {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
 .menu-toggle {
     display: none;
     background: transparent;
@@ -628,7 +641,8 @@ body {
 
     .header-actions {
         order: 3;
-        display: block;
+        display: flex;
+        gap: 8px;
     }
 
     .header-actions .action-btn {
@@ -646,8 +660,13 @@ body {
         background: rgba(237, 44, 37, 0.2);
     }
 
+    .sub-header {
+        margin-bottom: 20px;
+        padding: 0;
+        width: 100%;
+    }
+
     .search-container {
-        order: 4;
         width: 100%;
         max-width: 100%;
     }

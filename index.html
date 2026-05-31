@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- HLS.js for IPTV Streaming -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <link rel="stylesheet" href="style.css?v=1.7">
+    <link rel="stylesheet" href="style.css?v=1.8">
     
     <!-- PWA -->
     <link rel="manifest" href="manifest.json">
@@ -61,16 +61,22 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
             <div class="header-title-mobile">SoloTV</div>
-            <div class="search-container">
-                <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                <input type="text" id="search-input" placeholder="Buscar canal por nombre..." autocomplete="off">
-            </div>
             <div class="header-actions">
                 <button id="view-mode-toggle" title="Cambiar Vista" class="action-btn">
                     <i class="fa-solid fa-grip"></i>
                 </button>
+                <button id="exit-btn" title="Salir de la Aplicación" class="action-btn">
+                    <i class="fa-solid fa-power-off"></i>
+                </button>
             </div>
         </header>
+
+        <div class="sub-header">
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="search-input" placeholder="Buscar canal por nombre..." autocomplete="off">
+            </div>
+        </div>
 
         <!-- Dynamic Category Header Banner -->
         <div class="category-banner" id="category-banner">
@@ -120,6 +126,6 @@
         </div>
     </div>
 
-    <script src="app.js?v=1.7"></script>
+    <script src="app.js?v=1.8"></script>
 </body>
 </html>

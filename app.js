@@ -657,6 +657,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // 12. Exit application button handler
+    const exitBtn = document.getElementById('exit-btn');
+    if (exitBtn) {
+        exitBtn.addEventListener('click', () => {
+            if (window.Android && window.Android.exitApp) {
+                window.Android.exitApp();
+            } else {
+                window.close();
+            }
+        });
+    }
+
     // Run loader
     loadChannels();
 });
