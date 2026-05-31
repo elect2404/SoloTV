@@ -7,6 +7,30 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentTab = 'all'; // 'all', 'movies', 'documentaries', 'favorites', 'country:<name>', 'lang:<name>'
     let viewMode = localStorage.getItem('iptv_view_mode') || 'grid'; // 'grid', 'list'
     let hlsPlayer = null;
+    const countryNames = {
+        'argentina': 'Argentina',
+        'bolivia': 'Bolivia',
+        'chile': 'Chile',
+        'colombia': 'Colombia',
+        'costa-rica': 'Costa Rica',
+        'cuba': 'Cuba',
+        'ecuador': 'Ecuador',
+        'el-salvador': 'El Salvador',
+        'espana': 'España',
+        'estados-unidos': 'Estados Unidos',
+        'guatemala': 'Guatemala',
+        'honduras': 'Honduras',
+        'mexico': 'México',
+        'nicaragua': 'Nicaragua',
+        'panama': 'Panamá',
+        'paraguay': 'Paraguay',
+        'peru': 'Perú',
+        'puerto-rico': 'Puerto Rico',
+        'republica-dominicana': 'República Dominicana',
+        'uruguay': 'Uruguay',
+        'venezuela': 'Venezuela',
+        'internacionales': 'Internacionales'
+    };
 
     // DOM Elements
     const channelsGrid = document.getElementById('channels-grid');
@@ -156,43 +180,43 @@ document.addEventListener('DOMContentLoaded', () => {
             const source = ch.source.toLowerCase();
 
             let language = 'Español';
-            let country = 'España'; // Default country fallback
+            let country = 'espana'; // Default country fallback (normalized key)
 
             // Guess Language
             const isPortuguese = name.includes('portug') || name.includes('brasil') || name.includes('brazil') || name.includes('cnn portugal') || /\b(tvi|sic|rtp)\b/.test(name) || name.endsWith(' pt') || name.includes(' pt ') || name.includes('cultura rn') || name.includes('tv futuro');
             if (isPortuguese) {
                 language = 'Portugués';
-                country = (name.includes('brasil') || name.includes('brazil') || name.includes('cultura rn') || name.includes('tv futuro')) ? 'Brasil' : 'Portugal';
+                country = (name.includes('brasil') || name.includes('brazil') || name.includes('cultura rn') || name.includes('tv futuro')) ? 'brasil' : 'portugal';
             } else if (name.includes('german') || name.includes('deutsch') || name.includes('telebarn') || name.includes('welle') || name.includes('fernsehen')) {
                 language = 'Alemán';
-                country = 'Alemania';
+                country = 'alemania';
             } else if (name.includes('francais') || name.includes('français') || name.includes('france 24') || name.includes('tv5') || name.includes('tv3 cat') || name.includes('canal 324')) {
                 language = (name.includes('tv3') || name.includes('324')) ? 'Catalán' : 'Francés';
-                country = language === 'Catalán' ? 'España' : 'Francia';
+                country = language === 'Catalán' ? 'espana' : 'francia';
             } else if (name.includes('italiana') || name.includes('italiano') || name.includes('rai')) {
                 language = 'Italiano';
-                country = 'Italia';
+                country = 'italia';
             } else if (name.includes('arabic') || name.includes('árabe') || name.includes('arabia') || (name.includes('al jazeera') && !name.includes('english')) || name.includes('al-mayadeen') || name.includes('qatar')) {
                 language = 'Árabe';
-                country = 'Internacional';
+                country = 'internacionales';
             } else if (name.includes('israel') || name.includes('hebrew') || name.includes('hebreo')) {
                 language = 'Hebreo';
-                country = 'Internacional';
+                country = 'internacionales';
             } else if (name.includes('iranian') || name.includes('farsi') || name.includes('persa') || name.includes('persian')) {
                 language = 'Persa / Farsi';
-                country = 'Internacional';
+                country = 'internacionales';
             } else if (name.includes('korean') || name.includes('coreano') || name.includes('sbs') || name.includes('kbs') || name.includes('ytn') || name.includes('mbc')) {
                 language = 'Coreano';
-                country = 'Corea del Sur';
+                country = 'corea-del-sur';
             } else if (name.includes('cctv') || name.includes('cgtn english') || name.includes('ann news') || name.includes('ntv news') || name.includes('china')) {
                 language = 'Chino / Asiático';
-                country = 'China';
+                country = 'china';
             } else if (name.includes('24 hour free') || name.includes('abn bible') || name.includes('wjbk') || name.includes('usa today') || name.includes('wxii') || name.includes('strongman') || name.includes('rally') || name.includes('oan') || name.includes('nhra') || name.includes('nbc') || name.includes('fite') || name.includes('fanduel') || name.includes('racing') || name.includes('dust') || name.includes('draftkings') || name.includes('bx') || name.includes('golf') || name.includes('bbc') || name.includes('wgrz') || name.includes('buffalo') || name.includes('pbs') || name.includes('antiques') || name.includes('earth') || name.includes('adventure') || name.includes('science') || name.includes('mystery') || name.includes('cinema') || name.includes('documentary') || name.includes('nature') || name.includes('history') || name.includes('english') || name.includes('news') || name.includes('weather') || name.includes('bloomberg') || name.includes('cnbc') || name.includes('world') || name.includes('nasa') || name.includes('shark') || name.includes('cbs') || name.includes('fox') || name.includes('reuters') || name.includes('press tv') || name.includes('arirang') || name.includes('sky')) {
                 if (name.includes('espanol') || name.includes('español') || name.includes('latino') || name.includes('hechos') || name.includes('telediario')) {
                     language = 'Español';
                 } else {
                     language = 'Inglés';
-                    country = 'Internacional';
+                    country = 'internacionales';
                 }
             } else if (source.includes('estados-unidos')) {
                 if (name.includes('espanol') || name.includes('español') || name.includes('latino') || name.includes('hechos') || name.includes('telediario') || name.includes('deportes')) {
@@ -207,50 +231,50 @@ document.addEventListener('DOMContentLoaded', () => {
             // Guess Country (only override if it's currently España and it is actually Spanish language)
             if (language === 'Español') {
                 if (name.includes('canal de historia')) {
-                    country = 'Internacionales';
+                    country = 'internacionales';
                 } else if (name.includes('paraguay')) {
-                    country = 'Paraguay';
+                    country = 'paraguay';
                 } else if (source.includes('argentina') || name.includes('argentina') || name.includes(' c5n') || name.includes(' tn ') || name.includes('telemax') || name.includes('tandil') || name.includes('buenos aires')) {
-                    country = 'Argentina';
+                    country = 'argentina';
                 } else if (source.includes('venezuela') || name.includes('venezuela') || name.includes('venevision') || name.includes('televen') || name.includes('anzoategui') || name.includes('aragua')) {
-                    country = 'Venezuela';
+                    country = 'venezuela';
                 } else if (source.includes('colombia') || name.includes('colombia') || name.includes('caracol') || name.includes('capital') || name.includes('antioquia') || name.includes('telemedellin')) {
-                    country = 'Colombia';
+                    country = 'colombia';
                 } else if (source.includes('mexico') || name.includes('méxico') || name.includes('mexico') || name.includes('ortvweb') || name.includes('azteca') || name.includes('milenio') || name.includes('telediario') || name.includes('multimedios') || name.includes('estrellas') || name.includes('formula') || name.includes('heraldo')) {
-                    country = 'México';
+                    country = 'mexico';
                 } else if (source.includes('peru') || name.includes('perú') || name.includes('peru') || name.includes('willax') || name.includes('latina') || name.includes('exitosa') || name.includes('pbo') || name.includes('panamericana') || name.includes('atv') || name.includes('karibeña')) {
-                    country = 'Perú';
+                    country = 'peru';
                 } else if (source.includes('chile') || name.includes('chile') || name.includes('chilevisión') || name.includes('crtv') || name.includes('energeek') || name.includes('t13')) {
-                    country = 'Chile';
+                    country = 'chile';
                 } else if (source.includes('cuba') || name.includes('cuba') || name.includes('cubavisión') || name.includes('prensa latina')) {
-                    country = 'Cuba';
+                    country = 'cuba';
                 } else if (source.includes('uruguay') || name.includes('uruguay') || name.includes('valle nuevo')) {
-                    country = 'Uruguay';
+                    country = 'uruguay';
                 } else if (source.includes('ecuador') || name.includes('ecuador') || name.includes('hechos')) {
-                    country = 'Ecuador';
+                    country = 'ecuador';
                 } else if (source.includes('honduras') || name.includes('honduras') || name.includes('hch') || name.includes('une tv')) {
-                    country = 'Honduras';
+                    country = 'honduras';
                 } else if (source.includes('costa-rica') || name.includes('costa rica')) {
-                    country = 'Costa Rica';
+                    country = 'costa-rica';
                 } else if (source.includes('puerto-rico') || name.includes('puerto rico') || name.includes('wapa')) {
-                    country = 'Puerto Rico';
+                    country = 'puerto-rico';
                 } else {
-                    country = 'España';
+                    country = 'espana';
                 }
             }
             if (source.includes('estados-unidos')) {
-                country = 'Estados Unidos';
+                country = 'estados-unidos';
             }
 
             // Filter only Spanish-speaking countries and USA, map others to "Internacionales"
             const allowedCountries = new Set([
-                'Argentina', 'Bolivia', 'Chile', 'Colombia', 'Costa Rica', 'Cuba', 
-                'Ecuador', 'El Salvador', 'España', 'Estados Unidos', 'Guatemala', 
-                'Honduras', 'México', 'Nicaragua', 'Panamá', 'Paraguay', 'Perú', 
-                'Puerto Rico', 'República Dominicana', 'Uruguay', 'Venezuela'
+                'argentina', 'bolivia', 'chile', 'colombia', 'costa-rica', 'cuba', 
+                'ecuador', 'el-salvador', 'espana', 'estados-unidos', 'guatemala', 
+                'honduras', 'mexico', 'nicaragua', 'panama', 'paraguay', 'peru', 
+                'puerto-rico', 'republica-dominicana', 'uruguay', 'venezuela'
             ]);
             if (!allowedCountries.has(country)) {
-                country = 'Internacionales';
+                country = 'internacionales';
             }
 
             // Add back to items
@@ -263,10 +287,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Populate countries list in sidebar
         countriesList.innerHTML = '';
-        Array.from(countries).sort().forEach(country => {
+        Array.from(countries).sort().forEach(countryKey => {
             const li = document.createElement('li');
-            const displayName = country === 'Internacionales' ? t.international : country;
-            li.innerHTML = `<a href="#" data-tab="country:${country}"><i class="fa-solid fa-map-pin"></i> ${displayName}</a>`;
+            const displayName = countryNames[countryKey] || countryKey;
+            li.innerHTML = `<a href="#" data-tab="country:${countryKey}"><i class="fa-solid fa-map-pin"></i> ${displayName}</a>`;
             countriesList.appendChild(li);
         });
 
@@ -415,9 +439,9 @@ document.addEventListener('DOMContentLoaded', () => {
             categoryTitle.innerText = t.favorites;
             categoryDesc.innerText = t.favoritesDesc;
         } else if (currentTab.startsWith('country:')) {
-            const country = currentTab.replace('country:', '');
-            tabFiltered = allChannels.filter(ch => ch.country === country);
-            const countryName = country === 'Internacionales' ? t.international : country;
+            const countryKey = currentTab.replace('country:', '');
+            tabFiltered = allChannels.filter(ch => ch.country === countryKey);
+            const countryName = countryNames[countryKey] || countryKey;
             categoryTitle.innerText = currentLang === 'en' ? `Channels from ${countryName}` : `Canales de ${countryName}`;
             categoryDesc.innerText = t.countryDesc.replace('{name}', countryName);
         } else if (currentTab.startsWith('lang:')) {
