@@ -156,11 +156,20 @@ body {
 
 /* Header */
 .top-header {
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    background: rgba(12, 13, 20, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 16px 32px;
+    margin: -24px -32px 24px -32px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    margin-bottom: 24px;
+    transition: var(--transition);
 }
 
 .menu-toggle {
@@ -581,7 +590,8 @@ body {
         align-items: center;
         justify-content: space-between;
         gap: 12px;
-        margin-bottom: 20px;
+        margin: -20px -20px 20px -20px;
+        padding: 16px 20px;
     }
     
     .menu-toggle {
