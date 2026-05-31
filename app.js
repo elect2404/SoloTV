@@ -71,6 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (playerControlsTimeout) {
             clearTimeout(playerControlsTimeout);
         }
+        // Only auto-hide controls in TV mode
+        if (!playerModal.classList.contains('tv-mode')) {
+            return;
+        }
         playerControlsTimeout = setTimeout(() => {
             if (playerModal.classList.contains('active') && playerError.style.display !== 'flex') {
                 modalHeader.classList.add('overlay-hidden');
@@ -590,6 +594,14 @@ document.addEventListener('DOMContentLoaded', () => {
         modalFavBtn.onclick = () => {
             toggleFavorite(ch, modalFavBtn);
         };
+
+        // Detect TV mode (Android app WebView or large landscape screens)
+        const isTV = (window.Android) || (window.innerWidth >= 1200 && window.innerHeight >= 700);
+        if (isTV) {
+            playerModal.classList.add('tv-mode');
+        } else {
+            playerModal.classList.remove('tv-mode');
+        }
 
         // Open Modal
         playerModal.classList.add('active');
