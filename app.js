@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentTab = 'all'; // 'all', 'movies', 'documentaries', 'favorites', 'country:<name>', 'lang:<name>'
     let viewMode = localStorage.getItem('iptv_view_mode') || 'grid'; // 'grid', 'list'
     let hlsPlayer = null;
+    let isPlayerHistoryPushed = false;
     const countryNames = {
         'argentina': 'Argentina',
         'bolivia': 'Bolivia',
@@ -591,8 +592,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    let isPlayerHistoryPushed = false;
-
     function closePlayer() {
         playerModal.classList.remove('active');
         videoPlayer.pause();
@@ -795,6 +794,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
             }
         }
+    });
 
     // 12. Exit application button handler
     const exitBtn = document.getElementById('exit-btn');
