@@ -687,6 +687,17 @@ document.addEventListener('DOMContentLoaded', () => {
     playerModal.addEventListener('mousemove', showPlayerHeader);
     playerModal.addEventListener('click', showPlayerHeader);
 
+    // Toggle play/pause by clicking on the video player directly
+    videoPlayer.addEventListener('click', (e) => {
+        e.stopPropagation(); // prevent closing modal
+        if (videoPlayer.paused) {
+            videoPlayer.play().catch(() => {});
+        } else {
+            videoPlayer.pause();
+        }
+        showPlayerHeader();
+    });
+
     // 10. Sidebar responsive toggle
     menuToggle.addEventListener('click', () => {
         sidebar.classList.toggle('active');
@@ -706,6 +717,17 @@ document.addEventListener('DOMContentLoaded', () => {
             showPlayerHeader();
             
             const activeEl = document.activeElement;
+
+            // Space key or Enter key (when not focusing buttons) toggles play/pause
+            if (e.key === ' ' || (e.key === 'Enter' && activeEl !== closePlayerModal && activeEl !== modalFavBtn)) {
+                if (videoPlayer.paused) {
+                    videoPlayer.play().catch(() => {});
+                } else {
+                    videoPlayer.pause();
+                }
+                e.preventDefault();
+                return;
+            }
             
             if (activeEl === videoPlayer) {
                 // Let the video player handle arrow keys (seeking, volume)
