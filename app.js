@@ -368,12 +368,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     <i class="${isFav ? 'fa-solid' : 'fa-regular'} fa-heart"></i>
                 </button>
                 <div class="card-logo-container">
-                    <img class="card-logo" src="${logoPath || 'error'}" alt="${ch.name}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <i class="fa-solid fa-tv" style="display: none; font-size: 2.5rem; color: #555;"></i>
+                    <img class="card-logo" src="${logoPath || 'error'}" alt="${ch.name}" loading="lazy">
+                    <i class="fa-solid fa-tv fallback-icon" style="display: none; font-size: 2.5rem; color: #555;"></i>
                 </div>
                 <div class="card-title" title="${ch.name}">${ch.name}</div>
                 <div class="card-source">${ch.language}</div>
             `;
+
+            // Robust Image Fallback Handler (local -> remote -> placeholder)
+            const cardImg = card.querySelector('.card-logo');
+            cardImg.onerror = function() {
+                if (ch.local_logo && ch.logo && !this.src.includes(ch.logo)) {
+                    this.src = ch.logo;
+                } else {
+                    this.style.display = 'none';
+                    if (this.nextElementSibling) {
+                        this.nextElementSibling.style.display = 'block';
+                    }
+                    this.onerror = null;
+                }
+            };
 
             // Card Click Handler
             card.addEventListener('click', (e) => {
@@ -548,8 +562,13 @@ document.addEventListener('DOMContentLoaded', () => {
         modalFallbackIcon.style.display = 'none';
 
         modalChannelLogo.onerror = function() {
-            this.style.display = 'none';
-            modalFallbackIcon.style.display = 'block';
+            if (ch.local_logo && ch.logo && !this.src.includes(ch.logo)) {
+                this.src = ch.logo;
+            } else {
+                this.style.display = 'none';
+                modalFallbackIcon.style.display = 'block';
+                this.onerror = null;
+            }
         };
         
         // Favorite state in Modal
