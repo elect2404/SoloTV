@@ -55,6 +55,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalChannelTitle = document.getElementById('modal-channel-title');
     const modalFavBtn = document.getElementById('modal-fav-btn');
     const playerError = document.getElementById('player-error');
+    const modalHeader = playerModal.querySelector('.modal-header');
+
+    // Auto-hide Player Header State
+    let playerControlsTimeout = null;
+
+    function showPlayerHeader() {
+        if (modalHeader.classList.contains('overlay-hidden')) {
+            modalHeader.classList.remove('overlay-hidden');
+        }
+        resetPlayerHeaderTimer();
+    }
+
+    function resetPlayerHeaderTimer() {
+        if (playerControlsTimeout) {
+            clearTimeout(playerControlsTimeout);
+        }
+        playerControlsTimeout = setTimeout(() => {
+            if (playerModal.classList.contains('active') && playerError.style.display !== 'flex') {
+                modalHeader.classList.add('overlay-hidden');
+                if (document.activeElement === closePlayerModal || document.activeElement === modalFavBtn) {
+                    videoPlayer.focus();
+                }
+            }
+        }, 3000);
+    }
 
     // Translations Dictionary
     const translations = {
@@ -165,6 +190,14 @@ document.addEventListener('DOMContentLoaded', () => {
             populateFilters();
             renderChannels();
             setupSidebarNavigation();
+
+            // Autofocus first channel card for immediate navigation visibility
+            setTimeout(() => {
+                const firstCard = channelsGrid.querySelector('.channel-card');
+                if (firstCard) {
+                    firstCard.focus();
+                }
+            }, 300);
         } catch (error) {
             console.error('Error cargando canales:', error);
             channelsGrid.innerHTML = `<div class="empty-state"><i class="fa-solid fa-triangle-exclamation"></i><h3>${t.errorLoading}</h3><p>${t.errorLoadingDesc}</p></div>`;
@@ -561,11 +594,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Open Modal
         playerModal.classList.add('active');
         playerError.style.display = 'none';
+        modalHeader.classList.remove('overlay-hidden');
 
         // Focus close button inside modal for D-pad navigation
         setTimeout(() => {
             closePlayerModal.focus();
         }, 100);
+
+        // Start inactivity timer
+        resetPlayerHeaderTimer();
 
         // Push state for Android TV back navigation
         history.pushState({ playerOpen: true }, '');
@@ -609,6 +646,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function closePlayer() {
         playerModal.classList.remove('active');
+        modalHeader.classList.remove('overlay-hidden');
+        if (playerControlsTimeout) {
+            clearTimeout(playerControlsTimeout);
+            playerControlsTimeout = null;
+        }
         videoPlayer.pause();
         videoPlayer.src = '';
         if (hlsPlayer) {
@@ -641,6 +683,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Show header controls on user interactions inside the player modal
+    playerModal.addEventListener('mousemove', showPlayerHeader);
+    playerModal.addEventListener('click', showPlayerHeader);
+
     // 10. Sidebar responsive toggle
     menuToggle.addEventListener('click', () => {
         sidebar.classList.toggle('active');
@@ -656,6 +702,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // If modal is active, handle navigation between modal controls
         if (playerModal.classList.contains('active')) {
+            // Show header on activity
+            showPlayerHeader();
+            
             const activeEl = document.activeElement;
             
             if (activeEl === videoPlayer) {
@@ -694,14 +743,18 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const isMenuToggleVisible = () => window.getComputedStyle(menuToggle).display !== 'none';
 
-        // Case 1: Nothing focused or focused on body/unknown element
+        // Case 1: Nothing focused or focused on body/unknown element (Route directly to channels)
         if (!activeElement || activeElement === document.body || (!sidebarLinks.includes(activeElement) && !cards.includes(activeElement) && activeElement !== searchInput && activeElement !== viewModeToggle && activeElement !== exitBtn && activeElement !== menuToggle)) {
             if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
-                const activeSidebar = document.querySelector('.sidebar .nav-links a.active');
-                if (activeSidebar) {
-                    activeSidebar.focus();
-                } else if (sidebarLinks.length > 0) {
-                    sidebarLinks[0].focus();
+                if (cards.length > 0) {
+                    cards[0].focus();
+                } else {
+                    const activeSidebar = document.querySelector('.sidebar .nav-links a.active');
+                    if (activeSidebar) {
+                        activeSidebar.focus();
+                    } else if (sidebarLinks.length > 0) {
+                        sidebarLinks[0].focus();
+                    }
                 }
                 e.preventDefault();
             }
