@@ -602,8 +602,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const isTV = (window.Android) || (window.innerWidth >= 1200 && window.innerHeight >= 700);
         if (isTV) {
             playerModal.classList.add('tv-mode');
+            videoPlayer.removeAttribute('controls'); // Disable native browser controls on TV to hide ugly UI
         } else {
             playerModal.classList.remove('tv-mode');
+            videoPlayer.setAttribute('controls', 'true'); // Enable native browser controls on mobile
         }
 
         // Open Modal
