@@ -384,7 +384,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 currentTab = link.getAttribute('data-tab');
                 applyFiltersAndSearch();
-                window.scrollTo({ top: 0, behavior: 'instant' });
+                window.scrollTo(0, 0);
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
 
                 // On mobile, close sidebar automatically on selection
                 if (window.innerWidth <= 992) {
