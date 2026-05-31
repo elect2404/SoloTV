@@ -52,6 +52,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalChannelLogo = document.getElementById('modal-channel-logo');
     const modalFallbackIcon = document.getElementById('modal-fallback-icon');
     const modalChannelTitle = document.getElementById('modal-channel-title');
+
+    // Global Image Error Handler (Failproof)
+    window.handleImageError = function(img, remoteLogo) {
+        if (!img.dataset.triedRemote && remoteLogo && !img.src.includes(remoteLogo)) {
+            img.dataset.triedRemote = 'true';
+            img.src = remoteLogo;
+        } else {
+            img.style.display = 'none';
+            if (img.nextElementSibling) {
+                img.nextElementSibling.style.display = 'block';
+            }
+            img.onerror = null;
+        }
+    };
     const modalFavBtn = document.getElementById('modal-fav-btn');
     const playerError = document.getElementById('player-error');
     const modalHeader = playerModal.querySelector('.modal-header');
@@ -368,26 +382,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     <i class="${isFav ? 'fa-solid' : 'fa-regular'} fa-heart"></i>
                 </button>
                 <div class="card-logo-container">
-                    <img class="card-logo" src="${logoPath || 'error'}" alt="${ch.name}" loading="lazy">
+                    <img class="card-logo" src="${logoPath || 'error'}" alt="${ch.name}" loading="lazy" onerror="handleImageError(this, '${ch.logo || ''}')">
                     <i class="fa-solid fa-tv fallback-icon" style="display: none; font-size: 2.5rem; color: #555;"></i>
                 </div>
                 <div class="card-title" title="${ch.name}">${ch.name}</div>
                 <div class="card-source">${ch.language}</div>
             `;
-
-            // Robust Image Fallback Handler (local -> remote -> placeholder)
-            const cardImg = card.querySelector('.card-logo');
-            cardImg.onerror = function() {
-                if (ch.local_logo && ch.logo && !this.src.includes(ch.logo)) {
-                    this.src = ch.logo;
-                } else {
-                    this.style.display = 'none';
-                    if (this.nextElementSibling) {
-                        this.nextElementSibling.style.display = 'block';
-                    }
-                    this.onerror = null;
-                }
-            };
 
             // Card Click Handler
             card.addEventListener('click', (e) => {
@@ -558,18 +558,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function openPlayer(ch) {
         modalChannelTitle.innerText = ch.name;
         modalChannelLogo.src = ch.local_logo ? ch.local_logo : (ch.logo || 'error');
+        modalChannelLogo.dataset.triedRemote = ''; // Reset flag
+        modalChannelLogo.setAttribute('onerror', `handleImageError(this, '${ch.logo || ''}')`);
         modalChannelLogo.style.display = 'block';
         modalFallbackIcon.style.display = 'none';
-
-        modalChannelLogo.onerror = function() {
-            if (ch.local_logo && ch.logo && !this.src.includes(ch.logo)) {
-                this.src = ch.logo;
-            } else {
-                this.style.display = 'none';
-                modalFallbackIcon.style.display = 'block';
-                this.onerror = null;
-            }
-        };
         
         // Favorite state in Modal
         const isFav = favorites.some(fav => fav.page_url === ch.page_url);
