@@ -296,6 +296,7 @@ body {
     cursor: pointer;
     position: relative;
     transition: var(--transition);
+    gap: 8px;
 }
 
 .channel-card:hover,
@@ -320,7 +321,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
     padding: 6px;
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -347,7 +347,6 @@ body {
     font-size: 0.75rem;
     line-height: 1.4;
     color: var(--text-muted);
-    margin-top: 6px;
     background-color: rgba(255, 255, 255, 0.05);
     padding: 3px 8px;
     border-radius: 12px;
@@ -668,14 +667,14 @@ body {
     }
     
     .channel-card {
-        padding: 12px;
+        padding: 12px 12px 16px 12px;
         border-radius: 12px;
+        gap: 6px;
     }
     
     .card-logo-container {
         width: 60px;
         height: 60px;
-        margin-bottom: 12px;
     }
     
     .card-title {
