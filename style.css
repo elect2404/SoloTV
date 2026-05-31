@@ -346,12 +346,14 @@ body {
 
 .card-source {
     font-size: 0.75rem;
+    line-height: 1.4;
     color: var(--text-muted);
     margin-top: 6px;
     background-color: rgba(255, 255, 255, 0.05);
     padding: 3px 8px;
     border-radius: 12px;
     text-transform: capitalize;
+    display: inline-block;
 }
 
 .fav-btn {
@@ -679,5 +681,6 @@ body {
     
     .card-title {
         font-size: 0.85rem;
+        height: 2.2rem;
     }
 }
