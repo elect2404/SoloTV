@@ -481,6 +481,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6. Handle Search input changes
     searchInput.addEventListener('input', applyFiltersAndSearch);
 
+    // Prevent virtual keyboard from opening on D-Pad navigation focus
+    searchInput.addEventListener('click', () => {
+        searchInput.readOnly = false;
+        searchInput.focus();
+    });
+    searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            searchInput.readOnly = false;
+            searchInput.focus();
+        }
+    });
+    searchInput.addEventListener('blur', () => {
+        searchInput.readOnly = true;
+    });
+
     // 7. View Mode toggle (Grid / List)
     viewModeToggle.addEventListener('click', () => {
         viewMode = viewMode === 'grid' ? 'list' : 'grid';
