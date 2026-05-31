@@ -546,6 +546,15 @@ document.addEventListener('DOMContentLoaded', () => {
         playerModal.classList.add('active');
         playerError.style.display = 'none';
 
+        // Focus close button inside modal for D-pad navigation
+        setTimeout(() => {
+            closePlayerModal.focus();
+        }, 100);
+
+        // Push state for Android TV back navigation
+        history.pushState({ playerOpen: true }, '');
+        isPlayerHistoryPushed = true;
+
         // Play stream URL (.m3u8 HLS stream)
         const streamUrl = ch.stream_url;
         
@@ -582,6 +591,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    let isPlayerHistoryPushed = false;
+
     function closePlayer() {
         playerModal.classList.remove('active');
         videoPlayer.pause();
@@ -590,7 +601,22 @@ document.addEventListener('DOMContentLoaded', () => {
             hlsPlayer.destroy();
             hlsPlayer = null;
         }
+
+        // Clear history state if closed manually
+        if (isPlayerHistoryPushed) {
+            isPlayerHistoryPushed = false;
+            if (history.state && history.state.playerOpen) {
+                history.back();
+            }
+        }
     }
+
+    window.addEventListener('popstate', (e) => {
+        if (playerModal.classList.contains('active')) {
+            isPlayerHistoryPushed = false; // already went back in history
+            closePlayer();
+        }
+    });
 
     closePlayerModal.addEventListener('click', closePlayer);
     
@@ -614,51 +640,161 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // If modal is active, let video controls handle keys or override for D-Pad
+        // If modal is active, handle navigation between modal controls
         if (playerModal.classList.contains('active')) {
-            return;
-        }
-
-        const activeElement = document.activeElement;
-        if (!activeElement || !activeElement.classList.contains('channel-card')) {
-            // If nothing in grid is focused, pressing any arrow will focus the first channel
-            if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
-                const firstCard = channelsGrid.querySelector('.channel-card');
-                if (firstCard) {
-                    firstCard.focus();
+            const activeEl = document.activeElement;
+            
+            if (activeEl === videoPlayer) {
+                // Let the video player handle arrow keys (seeking, volume)
+                // but if ArrowUp is pressed, let's focus the close button
+                if (e.key === 'ArrowUp') {
+                    closePlayerModal.focus();
                     e.preventDefault();
                 }
+                return;
+            }
+
+            if (e.key === 'ArrowLeft' && activeEl === closePlayerModal) {
+                modalFavBtn.focus();
+                e.preventDefault();
+            } else if (e.key === 'ArrowRight' && activeEl === modalFavBtn) {
+                closePlayerModal.focus();
+                e.preventDefault();
+            } else if (e.key === 'ArrowDown' && (activeEl === closePlayerModal || activeEl === modalFavBtn)) {
+                videoPlayer.focus();
+                e.preventDefault();
             }
             return;
         }
 
-        const cards = Array.from(channelsGrid.querySelectorAll('.channel-card'));
-        const index = cards.indexOf(activeElement);
-        if (index === -1) return;
+        const activeElement = document.activeElement;
+        
+        // Helper to get all sidebar links
+        const getSidebarLinks = () => Array.from(document.querySelectorAll('.sidebar .nav-links a'));
+        
+        // Helper to get all channel cards
+        const getCards = () => Array.from(channelsGrid.querySelectorAll('.channel-card'));
 
-        // Calculate layout columns dynamically
-        const cardStyle = window.getComputedStyle(activeElement);
-        const cardWidth = activeElement.offsetWidth + parseFloat(cardStyle.marginRight || 0);
-        const containerWidth = channelsGrid.offsetWidth;
-        const columns = Math.max(1, Math.floor(containerWidth / cardWidth)) || 4;
-
-        let targetIndex = -1;
-
-        if (e.key === 'ArrowRight') {
-            targetIndex = index + 1;
-        } else if (e.key === 'ArrowLeft') {
-            targetIndex = index - 1;
-        } else if (e.key === 'ArrowDown') {
-            targetIndex = index + columns;
-        } else if (e.key === 'ArrowUp') {
-            targetIndex = index - columns;
+        const sidebarLinks = getSidebarLinks();
+        const cards = getCards();
+        
+        // Case 1: Nothing focused or focused on body/unknown element
+        if (!activeElement || activeElement === document.body || (!sidebarLinks.includes(activeElement) && !cards.includes(activeElement) && activeElement !== searchInput && activeElement !== viewModeToggle && activeElement !== exitBtn)) {
+            if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+                const activeSidebar = document.querySelector('.sidebar .nav-links a.active');
+                if (activeSidebar) {
+                    activeSidebar.focus();
+                } else if (sidebarLinks.length > 0) {
+                    sidebarLinks[0].focus();
+                }
+                e.preventDefault();
+            }
+            return;
         }
 
-        if (targetIndex >= 0 && targetIndex < cards.length) {
-            cards[targetIndex].focus();
-            e.preventDefault();
+        // Case 2: Sidebar Link is focused
+        if (sidebarLinks.includes(activeElement)) {
+            const index = sidebarLinks.indexOf(activeElement);
+            if (e.key === 'ArrowUp') {
+                if (index > 0) {
+                    sidebarLinks[index - 1].focus();
+                }
+                e.preventDefault();
+            } else if (e.key === 'ArrowDown') {
+                if (index < sidebarLinks.length - 1) {
+                    sidebarLinks[index + 1].focus();
+                }
+                e.preventDefault();
+            } else if (e.key === 'ArrowRight') {
+                if (cards.length > 0) {
+                    cards[0].focus();
+                } else {
+                    searchInput.focus();
+                }
+                e.preventDefault();
+            }
+            return;
         }
-    });
+
+        // Case 3: Search Input is focused
+        if (activeElement === searchInput) {
+            if (e.key === 'ArrowLeft') {
+                const activeSidebar = document.querySelector('.sidebar .nav-links a.active') || sidebarLinks[0];
+                if (activeSidebar) activeSidebar.focus();
+                e.preventDefault();
+            } else if (e.key === 'ArrowDown') {
+                if (cards.length > 0) {
+                    cards[0].focus();
+                }
+                e.preventDefault();
+            } else if (e.key === 'ArrowUp' || e.key === 'ArrowRight') {
+                viewModeToggle.focus();
+                e.preventDefault();
+            }
+            return;
+        }
+
+        // Case 4: Top Action Buttons are focused
+        if (activeElement === viewModeToggle || activeElement === exitBtn) {
+            if (e.key === 'ArrowLeft') {
+                if (activeElement === exitBtn) {
+                    viewModeToggle.focus();
+                } else {
+                    const activeSidebar = document.querySelector('.sidebar .nav-links a.active') || sidebarLinks[0];
+                    if (activeSidebar) activeSidebar.focus();
+                }
+                e.preventDefault();
+            } else if (e.key === 'ArrowRight') {
+                if (activeElement === viewModeToggle) {
+                    exitBtn.focus();
+                }
+                e.preventDefault();
+            } else if (e.key === 'ArrowDown') {
+                searchInput.focus();
+                e.preventDefault();
+            }
+            return;
+        }
+
+        // Case 5: Channel Card is focused
+        if (cards.includes(activeElement)) {
+            const index = cards.indexOf(activeElement);
+            if (index === -1) return;
+
+            // Calculate layout columns dynamically
+            const cardStyle = window.getComputedStyle(activeElement);
+            const cardWidth = activeElement.offsetWidth + parseFloat(cardStyle.marginRight || 0);
+            const containerWidth = channelsGrid.offsetWidth;
+            const columns = Math.max(1, Math.floor(containerWidth / cardWidth)) || 4;
+
+            if (e.key === 'ArrowRight') {
+                if (index < cards.length - 1) {
+                    cards[index + 1].focus();
+                }
+                e.preventDefault();
+            } else if (e.key === 'ArrowLeft') {
+                // If it's the leftmost card in its row, go to the active sidebar link
+                if (index % columns === 0) {
+                    const activeSidebar = document.querySelector('.sidebar .nav-links a.active') || sidebarLinks[0];
+                    if (activeSidebar) activeSidebar.focus();
+                } else if (index > 0) {
+                    cards[index - 1].focus();
+                }
+                e.preventDefault();
+            } else if (e.key === 'ArrowDown') {
+                if (index + columns < cards.length) {
+                    cards[index + columns].focus();
+                }
+                e.preventDefault();
+            } else if (e.key === 'ArrowUp') {
+                if (index - columns >= 0) {
+                    cards[index - columns].focus();
+                } else {
+                    searchInput.focus();
+                }
+                e.preventDefault();
+            }
+        }
 
     // 12. Exit application button handler
     const exitBtn = document.getElementById('exit-btn');

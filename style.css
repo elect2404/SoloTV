@@ -131,9 +131,15 @@ body {
 }
 
 .nav-links li a:hover,
+.nav-links li a:focus,
 .nav-links li a.active {
     color: var(--text-active);
     background-color: var(--bg-card-hover);
+    outline: none;
+}
+
+.nav-links li a:focus {
+    box-shadow: inset 0 0 0 2px var(--primary);
 }
 
 .nav-links li a.active {
@@ -252,10 +258,13 @@ body {
     transition: var(--transition);
 }
 
-.action-btn:hover {
+.action-btn:hover,
+.action-btn:focus {
     background-color: var(--bg-card-hover);
     border-color: var(--primary);
     color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 10px var(--primary-glow);
 }
 
 /* Banner */
@@ -494,8 +503,10 @@ body {
 }
 
 .modal-action-btn:hover,
+.modal-action-btn:focus,
 .modal-action-btn.active {
     color: var(--primary);
+    outline: none;
 }
 
 .close-modal {
@@ -507,8 +518,10 @@ body {
     transition: var(--transition);
 }
 
-.close-modal:hover {
+.close-modal:hover,
+.close-modal:focus {
     color: var(--primary);
+    outline: none;
 }
 
 .video-wrapper {
